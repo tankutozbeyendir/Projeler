@@ -1,0 +1,28 @@
+﻿@model HaberSitesiMVC.Models.Classes.İletisim
+@{
+    ViewBag.Title = "IletisimGetir";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>İletişim Görüntüle</h2>
+
+<br />
+
+@using (Html.BeginForm("IletisimGuncelle", "Admin", FormMethod.Post))
+{
+    <label>ID</label>
+    @Html.TextBoxFor(x => x.ID, new { @class = "form-control", @readonly = "readonly" })
+    <br />
+    <label>ISIM SOYISIM</label>
+    @Html.TextBoxFor(x => x.adsoyad, new { @class = "form-control", @readonly = "readonly" })
+    <br />
+    <label>MAIL</label>
+    @Html.TextBoxFor(x => x.mail, new { @class = "form-control", @readonly = "readonly" })
+    <br />
+    <label>KONU</label>
+    @Html.TextBoxFor(x => x.konu, new { @class = "form-control", @readonly = "readonly" })
+    <br />
+    <label>MESAJ</label>
+    @Html.TextAreaFor(x => x.mesaj, 15, 1, new { @class = "form-control", @readonly = "readonly" })
+    <br />
+}

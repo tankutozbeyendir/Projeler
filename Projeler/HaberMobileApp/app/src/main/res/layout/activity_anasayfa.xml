@@ -1,0 +1,541 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AnasayfaActivity"
+    android:background="#252525">
+
+
+    
+<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_gravity="center_horizontal">
+
+
+
+
+    <ImageView
+        android:layout_width="350dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/logo"
+        android:id="@+id/lgo"
+        ></ImageView>
+
+    <TextView
+        android:layout_width="350dp"
+        android:layout_height="match_parent"
+        android:textColor="#fdfdfd"
+        android:id="@+id/hakkimizdatextbaslik"
+        android:textSize="32dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:text="Dünyada olan olaylardan habersiz kalmayın!"
+        ></TextView>
+    <TextView
+        android:layout_width="350dp"
+        android:layout_height="40dp"
+        android:textColor="#fdfdfd"
+        android:id="@+id/hakkimizdatext1"
+        android:textSize="20dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"
+        android:text="HABER PORTAL"
+        ></TextView>
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
+        android:id="@+id/hakkimizdabutton"
+        android:text="HAKKIMIZDA"
+        android:textSize="18dp"
+        android:layout_marginLeft="30dp"
+        ></Button>
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
+        android:id="@+id/iletisimbutton"
+        android:text="İLETİŞİM"
+        android:textSize="18dp"
+        android:layout_marginLeft="30dp"
+        ></Button>
+
+    <TextView
+        android:layout_width="350dp"
+        android:layout_height="40dp"
+        android:textColor="#fdfdfd"
+        android:id="@+id/anasayfabaslik"
+        android:textSize="30dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:text="HABERLER"
+        ></TextView>
+
+
+    <androidx.cardview.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view"
+        android:layout_gravity="center"
+        android:layout_width="350dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="20dp"
+        card_view:cardCornerRadius="4dp"
+        >
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="fill_parent"
+            android:layout_height="200dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/pc1" />
+        <TextView
+            android:id="@+id/info_text"
+            android:text="Güncel korona virüs sayılarını takip edin!"
+            android:shadowColor="#3E3E3E"
+            android:shadowDx="5"
+            android:shadowDy="5"
+            android:shadowRadius="5"
+            android:layout_width="350dp"
+            android:textSize="18dp"
+            android:layout_height="40dp"
+            android:textColor="@color/white"
+            android:layout_gravity="center"
+            android:layout_marginTop="70dp"
+            android:layout_marginLeft="10dp"
+             />
+    </androidx.cardview.widget.CardView>
+
+
+
+
+
+
+
+    <androidx.cardview.widget.CardView
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_view2"
+    android:layout_gravity="center"
+    android:layout_width="350dp"
+    android:layout_height="200dp"
+    android:layout_marginTop="20dp"
+    card_view:cardCornerRadius="4dp"
+    >
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="fill_parent"
+        android:layout_height="200dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/pc2" />
+    <TextView
+        android:id="@+id/info_text2"
+        android:text="Volkswagen yeni teknolojisini açıkladı."
+        android:shadowColor="#3E3E3E"
+        android:shadowDx="5"
+        android:shadowDy="5"
+        android:shadowRadius="5"
+        android:layout_width="350dp"
+        android:textSize="18dp"
+        android:layout_height="40dp"
+        android:textColor="@color/white"
+        android:layout_gravity="center"
+        android:layout_marginTop="70dp"
+        android:layout_marginLeft="10dp"
+        />
+</androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view3"
+        android:layout_gravity="center"
+        android:layout_width="350dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="20dp"
+        card_view:cardCornerRadius="4dp"
+        >
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="fill_parent"
+            android:layout_height="200dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/pc3" />
+        <TextView
+            android:id="@+id/info_text3"
+            android:text="İsviçreli bilim adamı saatçi oldu."
+            android:layout_width="350dp"
+            android:textSize="18dp"
+            android:layout_height="40dp"
+            android:shadowColor="#3E3E3E"
+            android:shadowDx="5"
+            android:shadowDy="5"
+            android:shadowRadius="5"
+            android:textColor="@color/white"
+            android:layout_gravity="center"
+            android:layout_marginTop="70dp"
+            android:layout_marginLeft="10dp"
+            />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view4"
+        android:layout_gravity="center"
+        android:layout_width="350dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="20dp"
+        card_view:cardCornerRadius="4dp"
+        >
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="fill_parent"
+            android:layout_height="200dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/pc5" />
+        <TextView
+            android:id="@+id/info_text4"
+            android:text="Tinder, yeni güvenlik uygulaması getiriyor."
+            android:layout_width="350dp"
+            android:textSize="18dp"
+            android:layout_height="40dp"
+            android:shadowColor="#3E3E3E"
+            android:shadowDx="5"
+            android:shadowDy="5"
+            android:shadowRadius="5"
+            android:textColor="@color/white"
+            android:layout_gravity="center"
+            android:layout_marginTop="70dp"
+            android:layout_marginLeft="10dp"
+            />
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view5"
+        android:layout_gravity="center"
+        android:layout_width="350dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="20dp"
+        card_view:cardCornerRadius="4dp"
+        >
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="fill_parent"
+            android:layout_height="200dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/pc4" />
+        <TextView
+            android:id="@+id/info_text5"
+            android:text="Windows, ingilterede ki sunucuların güvende olmadığını söyledi."
+            android:layout_width="350dp"
+            android:textSize="18dp"
+            android:layout_height="40dp"
+            android:shadowColor="#3E3E3E"
+            android:shadowDx="5"
+            android:shadowDy="5"
+            android:shadowRadius="5"
+            android:textColor="@color/white"
+            android:layout_gravity="center"
+            android:layout_marginTop="70dp"
+            android:layout_marginLeft="10dp"
+            />
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view6"
+        android:layout_gravity="center"
+        android:layout_width="350dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="20dp"
+        card_view:cardCornerRadius="4dp"
+        >
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="fill_parent"
+            android:layout_height="200dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/pc6" />
+        <TextView
+            android:id="@+id/info_text6"
+            android:text="Youtube, aşıyla ilgili videoları siliyor."
+            android:layout_width="350dp"
+            android:textSize="18dp"
+            android:layout_height="40dp"
+            android:shadowColor="#3E3E3E"
+            android:shadowDx="5"
+            android:shadowDy="5"
+            android:shadowRadius="5"
+            android:textColor="@color/white"
+            android:layout_gravity="center"
+            android:layout_marginTop="70dp"
+            android:layout_marginLeft="10dp"
+            />
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view7"
+        android:layout_gravity="center"
+        android:layout_width="350dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="20dp"
+        card_view:cardCornerRadius="4dp"
+        >
+        <ImageView
+            android:id="@+id/imageView7"
+            android:layout_width="fill_parent"
+            android:layout_height="200dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/pc7" />
+        <TextView
+            android:id="@+id/info_text7"
+            android:text="Benzine yine zam geldi!"
+            android:layout_width="350dp"
+            android:textSize="18dp"
+            android:layout_height="40dp"
+            android:shadowColor="#3E3E3E"
+            android:shadowDx="5"
+            android:shadowDy="5"
+            android:shadowRadius="5"
+            android:textColor="@color/white"
+            android:layout_gravity="center"
+            android:layout_marginTop="70dp"
+            android:layout_marginLeft="10dp"
+            />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view8"
+        android:layout_gravity="center"
+        android:layout_width="350dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="20dp"
+        card_view:cardCornerRadius="4dp"
+        >
+        <ImageView
+            android:id="@+id/imageView8"
+            android:layout_width="fill_parent"
+            android:layout_height="200dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/pc8" />
+        <TextView
+            android:id="@+id/info_text8"
+            android:text="İşte, zehrin kokusunu alan polis yardımcıları."
+            android:layout_width="350dp"
+            android:textSize="18dp"
+            android:layout_height="40dp"
+            android:shadowColor="#3E3E3E"
+            android:shadowDx="5"
+            android:shadowDy="5"
+            android:shadowRadius="5"
+            android:textColor="@color/white"
+            android:layout_gravity="center"
+            android:layout_marginTop="70dp"
+            android:layout_marginLeft="10dp"
+            />
+    </androidx.cardview.widget.CardView>
+    <TextView
+        android:layout_width="350dp"
+        android:layout_height="40dp"
+        android:textColor="#fdfdfd"
+        android:id="@+id/eklenecekbaslik"
+        android:textSize="26dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:text="EKLENECEK HABERLER"
+        ></TextView>
+
+
+    <TextView
+        android:layout_width="350dp"
+        android:layout_height="40dp"
+        android:textColor="#E1E1D6"
+        android:id="@+id/eklenecek1"
+        android:shadowColor="@color/white"
+        android:shadowDy="1"
+        android:shadowDx="1"
+        android:shadowRadius="1"
+        android:textSize="17dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:text="Apple gözlükleri, neler bekliyoruz, neler düşünüyoruz?"
+        ></TextView>
+    <TextView
+        android:layout_width="350dp"
+        android:layout_height="40dp"
+        android:textColor="#E1E1D6"
+        android:id="@+id/eklenecek1alt"
+        android:shadowColor="@color/white"
+        android:shadowDy="1"
+        android:shadowDx="1"
+        android:shadowRadius="1"
+        android:textSize="14dp"
+        android:layout_gravity="center"
+        android:text="EDİTÖR : ADMIN"
+        ></TextView>
+    <TextView
+        android:layout_width="350dp"
+        android:layout_height="40dp"
+        android:textColor="#E1E1D6"
+        android:id="@+id/eklenecek2"
+        android:shadowColor="@color/white"
+        android:shadowDy="1"
+        android:shadowDx="1"
+        android:shadowRadius="1"
+        android:textSize="17dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:text="Elon Musk'ın eski telefon numarasına sahip olmak nasl bir şey?"
+        ></TextView>
+    <TextView
+        android:layout_width="350dp"
+        android:layout_height="40dp"
+        android:textColor="#E1E1D6"
+        android:id="@+id/eklenecek2alt"
+        android:shadowColor="@color/white"
+        android:shadowDy="1"
+        android:shadowDx="1"
+        android:shadowRadius="1"
+        android:textSize="14dp"
+        android:layout_gravity="center"
+
+        android:text="EDİTÖR : ADMIN"
+        ></TextView>
+    <TextView
+        android:layout_width="350dp"
+        android:layout_height="40dp"
+        android:textColor="#E1E1D6"
+        android:id="@+id/eklenecek3"
+        android:shadowColor="@color/white"
+        android:shadowDy="1"
+        android:shadowDx="1"
+        android:shadowRadius="1"
+        android:textSize="17dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:text="Chirss Pratt'ın yanlışlıkla 51 bin email'ı sildiği anı izleyin"
+        ></TextView>
+    <TextView
+        android:layout_width="350dp"
+        android:layout_height="40dp"
+        android:textColor="#E1E1D6"
+        android:id="@+id/eklenecek3alt"
+        android:shadowColor="@color/white"
+        android:shadowDy="1"
+        android:shadowDx="1"
+        android:shadowRadius="1"
+        android:textSize="14dp"
+        android:layout_gravity="center"
+
+        android:text="EDİTÖR : ADMIN"
+        ></TextView>
+    <TextView
+        android:layout_width="350dp"
+        android:layout_height="40dp"
+        android:textColor="#E1E1D6"
+        android:id="@+id/eklenecek4"
+        android:shadowColor="@color/white"
+        android:shadowDy="1"
+        android:shadowDx="1"
+        android:shadowRadius="1"
+        android:textSize="17dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:text="Richard Branson'un dokunulmamış adlı gemisi pazar günü havalanacak"
+        ></TextView>
+    <TextView
+        android:layout_width="350dp"
+        android:layout_height="40dp"
+        android:textColor="#E1E1D6"
+        android:id="@+id/eklenecek4alt"
+        android:shadowColor="@color/white"
+        android:shadowDy="1"
+        android:shadowDx="1"
+        android:shadowRadius="1"
+        android:textSize="14dp"
+        android:layout_gravity="center"
+
+        android:text="EDİTÖR : ADMIN"
+        ></TextView>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <TextView
+        android:layout_width="350dp"
+        android:layout_height="40dp"
+        android:textColor="#fff"
+        android:id="@+id/copyright"
+        android:shadowColor="#E1E1D6"
+        android:shadowDy="1"
+        android:shadowDx="1"
+        android:shadowRadius="1"
+        android:textSize="14dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="80dp"
+        android:text="Copyright © 2021 | Tankut Özbeyendir, Mert Orak"
+        ></TextView>
+    
+</LinearLayout>
+</ScrollView>

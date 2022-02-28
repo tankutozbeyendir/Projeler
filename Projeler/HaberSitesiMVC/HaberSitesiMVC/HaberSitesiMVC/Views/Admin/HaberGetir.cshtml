@@ -1,0 +1,37 @@
+﻿@model HaberSitesiMVC.Models.Classes.Haber
+@{
+    ViewBag.Title = "HaberGetir";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Haber Güncelle</h2>
+<br />
+
+@using (Html.BeginForm("HaberGuncelle", "Admin", FormMethod.Post))
+{
+    <label>ID</label>
+    @Html.TextBoxFor(x => x.ID, new { @class = "form-control", @readonly = "readonly" })
+    <br />
+    <label>BAŞLIK</label>
+    @Html.TextBoxFor(x => x.baslik, new { @class = "form-control" })
+    <br />
+    <label>EDİTÖR</label>
+    @Html.TextBoxFor(x => x.editor, new { @class = "form-control", @readonly= "readonly" })
+    <br />
+    <label>TARİH</label>
+    @Html.TextBoxFor(x => x.tarih, new { @class = "form-control" })
+    <br />
+    <label>GÖRSEL</label>
+    @Html.TextBoxFor(x => x.haberimage, new { @class = "form-control" })
+    <br />
+    <label>GÖRSEL 2</label>
+    @Html.TextBoxFor(x => x.haberimage2, new { @class = "form-control" })
+    <br />
+    <label>HABER AÇIKLAMA</label>
+    @Html.TextAreaFor(x => x.aciklama, 15, 1, new { @class = "form-control" })
+    <br />
+    <label>HABER AÇIKLAMA 2</label>
+    @Html.TextAreaFor(x => x.aciklama2, 15, 1, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-success">HABER GÜNCELLE</button>
+}

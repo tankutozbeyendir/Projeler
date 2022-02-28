@@ -1,0 +1,28 @@
+﻿@model odevmvc.Models.Classes.project
+@{
+    ViewBag.Title = "AddProject";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<h2 class="title-page">Proje Ekle</h2>
+
+<br />
+<form method="post" class="form-group">
+    <label>BAŞLIK</label>
+    @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+    <br />
+    <label>AUTHOR</label>
+    @Html.TextBoxFor(x => x.Author, new { @class = "form-control", @readonly = "readonly", @Value = Session["kullanici"].ToString() })
+    <br />
+    <label>TARİH</label>
+    @Html.TextBoxFor(x => x.Date, new { @class = "form-control" })
+    <br />
+    <label>GÖRSEL</label>
+    @Html.TextBoxFor(x => x.Image, new { @class = "form-control" })
+    <br />
+    <label>HABER AÇIKLAMA</label>
+    @Html.TextAreaFor(x => x.Description, 15, 1, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-success">PROJE EKLE</button>
+
+</form>

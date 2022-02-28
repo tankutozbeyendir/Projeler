@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="script/style.css">
+    <!--jQuery-->
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!--Font awesome-->
+    <script src="https://kit.fontawesome.com/a981a7918e.js" crossorigin="anonymous"></script>
+    <title>Web tasarım ödevi</title>
+</head>
+<body>
+    <div class="cursor cursor--small"></div>
+      <canvas class="cursor cursor--canvas" resize></canvas>
+    <header id="home" >
+        <div class="lang">
+            <a href="index.html" style="border-right: 1px solid white;">TR</a>
+            <a href="en/index.html">EN</a>
+        </div>
+        <nav id="navFixed">   
+            <ul>    
+                <li><a href="#home" id="linkHome">ANASAYFA</a></li>
+                <li><a href="#about">HAKKIMDA</a></li>
+                <li><h1>Tankut Özbeyendir</h1></li>
+                <li><a href="#experience">DENEYIM</a></li>
+                <li><a href="#contact">ILETISIM</a></li>
+                <a href="#" class="light-off-on-btn"><i class="fas fa-toggle-off"></i><i class="fas fa-toggle-on" style="display: none;"></i></a>
+            </ul>
+        </nav>
+        <div class="text">
+            
+            <h1 id="asd">DE<span>VELOPER.</span></h1><br>
+                <p class="type">Console.WriteLine("hello world");</p>
+            
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="wave"><path fill="#360404ec" fill-opacity="1" d="M0,64L24,85.3C48,107,96,149,144,144C192,139,240,85,288,101.3C336,117,384,203,432,234.7C480,267,528,245,576,197.3C624,149,672,75,720,90.7C768,107,816,213,864,245.3C912,277,960,235,1008,202.7C1056,171,1104,149,1152,154.7C1200,160,1248,192,1296,197.3C1344,203,1392,181,1416,170.7L1440,160L1440,320L1416,320C1392,320,1344,320,1296,320C1248,320,1200,320,1152,320C1104,320,1056,320,1008,320C960,320,912,320,864,320C816,320,768,320,720,320C672,320,624,320,576,320C528,320,480,320,432,320C384,320,336,320,288,320C240,320,192,320,144,320C96,320,48,320,24,320L0,320Z"></path></svg>
+    </header>
+    <section id="about">
+        <div class="about-left">
+            <h1 class="text-1">I am a</h1>
+            <h1 class="ml11">
+                <span class="text-wrapper">
+                  <span class="line line1"></span>
+                  <span class="letters">Programmer</span>
+                </span>
+              </h1>
+        </div>
+        
+        <div class="about-right">
+            <img src="images/user.png" alt="" class="user">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat, nulla cupiditate omnis vero harum, delectus deleniti at veniam quaerat illo beatae, impedit neque quae quis saepe illum. Consequatur, pariatur eos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, dignissimos et! Libero, quos. Ullam assumenda voluptas porro, autem dolorem maxime dolor molestias amet ipsum ratione veritatis placeat facilis, deserunt modi?</p>
+            
+            
+        </div>
+        
+    </section>
+    <section id="experience">
+        <div class="wrapper">
+            <div class="container">
+                <h2>web geliştirme</h2>
+                <div class="skills">
+                    <div class="details">
+                        <i class="fab fa-html5" style="color: #e54c21;"></i><span>HTML5</span>
+                      <span>90%</span>
+                    </div>
+                    <div class="bar">
+                       <div id="html-bar"></div>
+                    </div>
+                </div>
+                <div class="skills">
+                    <div class="details">
+                        <i class="fab fa-css3-alt" style="color: #264de4;"></i><span>CSS3</span>
+                      <span>80%</span>
+                    </div>
+                    <div class="bar">
+                       <div id="css-bar"></div>
+                    </div>
+                </div>
+                <div class="skills">
+                    <div class="details">
+                        <i class="fab fa-js" style="color: #f7e018;"></i><span>JavaScript</span>
+                      <span>50%</span>
+                    </div>
+                    <div class="bar">
+                       <div id="js-bar"></div>
+                    </div>
+                </div>
+                <div class="skills">
+                    <div class="details">
+                        <i class="fab fa-react" style="color: #61dbfb;"></i><span>React JS</span>
+                      <span>10%</span>
+                    </div>
+                    <div class="bar">
+                       <div id="react-bar"></div>
+                    </div>
+                </div>
+                <div class="skills">
+                    <div class="details">
+                        <i class="fab fa-adn" style="color: #0d82ca;"></i><span>ASP.NET</span>
+                      <span>70%</span>
+                    </div>
+                    <div class="bar">
+                       <div id="asp-bar"></div>
+                    </div>
+                </div>
+                <h2>Windows</h2>
+                <div class="skills">
+                    <div class="details">
+                        <i class="fab fa-windows" style="color: #0bb2ed;"></i><span>Windows Masaüstü Uygulaması</span>
+                      <span>80%</span>
+                    </div>
+                    <div class="bar">
+                       <div id="windows-bar"></div>
+                    </div>
+                </div>
+            </div>
+          </div>
+    </section>
+    <section id="contact">
+        <div class="contact-container">
+            <div class="contact-form">
+                <form action="#" class="form">
+                    <span class="title">İletişim</span>
+                    <div class="contact-input">
+                        <input type="text" class="input" name="#" placeholder="İsim" required>
+                    </div>
+                    <div class="contact-input">
+                        <input type="text" name="#" class="input"  placeholder="Email" required>
+                    </div>
+                    <div class="contact-input">
+                        <input type="text" name="#" class="input"  placeholder="Konu" required>
+                    </div>
+                    <div class="contact-input">
+                        <textarea name="#" id="#" class="input"  placeholder="Mesaj" required></textarea>
+                    </div>
+                    <div class="contact-btn">
+                        <button class="btn">GÖNDER<i class="fa fa-paper-plane-o m-r-6" aria-hidden="true"></i></button>
+                    </div>
+                </form>
+            </div>
+            <div class="contact-right">
+                <div class="title">SOSYAL MEDYA</div>
+                <div class="item-media">
+                    <i class="fab fa-github"></i>
+                </div>
+                <div class="item-media">
+                    <i class="fab fa-instagram"></i>
+                </div>
+                <div class="item">
+                    <i class="fas fa-envelope"></i><p> tankutozbeyendir@gmail.com</p>
+                </div>
+                <div class="item">
+                    <i class="fas fa-phone"></i><p> 0535353535</p>
+                </div>
+            </div>
+        </div>
+        
+    <a href="#" class="gotopbtn"><i class="fas fa-arrow-up"></i></a>
+    </section>
+    
+   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.12.0/paper-core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/simplex-noise/2.4.0/simplex-noise.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script/app.js"></script>
+</body>
+</html>

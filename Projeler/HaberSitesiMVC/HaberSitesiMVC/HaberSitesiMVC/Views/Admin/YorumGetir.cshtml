@@ -1,0 +1,29 @@
+﻿@model HaberSitesiMVC.Models.Classes.Yorum
+@{
+    ViewBag.Title = "YorumGetir";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Yorum Güncelle</h2>
+
+<br />
+
+@using (Html.BeginForm("YorumGuncelle", "Admin", FormMethod.Post))
+{
+    <label>ID</label>
+    @Html.TextBoxFor(x => x.ID, new { @class = "form-control", @readonly = "readonly" })
+    <br />
+    <label>KULLANICI ADI</label>
+    @Html.TextBoxFor(x => x.kullanici, new { @class = "form-control" })
+    <br />
+    <label>MAİL</label>
+    @Html.TextBoxFor(x => x.mail, new { @class = "form-control" })
+    <br />
+    <label>YORUM</label>
+    @Html.TextAreaFor(x => x.yorumlar, 15, 1, new { @class = "form-control" })
+    <br />
+    <label>HABER İSMİ</label>
+    @Html.TextBoxFor(x => x.haber.baslik, new { @class = "form-control", @readonly = "readonly" })
+    <br />
+    <button class="btn btn-success">YORUM GÜNCELLE</button>
+}

@@ -1,0 +1,175 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+  ::-webkit-scrollbar { 
+    width: 6px;
+    background: #252525;
+}
+::-webkit-scrollbar-thumb {
+    background: #812121;
+
+}
+
+
+/** Contact Section **/
+
+#iletisim {
+    background: linear-gradient(to bottom, rgba(0,0,0.5), rgba(0,0,0,.1)), url("../images/bg4.jpg") center no-repeat;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.giris, .yazialani {
+	outline: none;
+	border: none;
+}
+
+.iletisim-alan {
+    width: 1000px;
+}
+.iletisim-sag {
+    width: 450px;
+    float: right;
+    margin-top: 50px;
+}
+.eleman {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 30px;
+}
+.eleman p {
+    font-family: 'Inter';
+    font-weight: 100;
+    color: #fff;
+}
+.eleman i {
+    color: #fff;
+    padding: 10px;
+}
+.medya-eleman {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    padding: 30px;
+}
+.medya-eleman i {
+    font-size: 40px;
+    color: #fff;
+    transition: all .5s ease;
+    cursor: pointer;
+}
+.medya-eleman i:hover {
+    transition: all .5s ease-in-out;
+    transform: translateX(-5px);
+    color: #a03320;
+}
+
+.iletisim-form {
+    width: 550px;
+    float: left;
+    padding: 50px 0px 160px 0px;
+}
+  
+.form {
+    width: 100%;
+}
+  
+.baslik {
+    display: block;
+    font-family: 'Raleway';
+    font-weight: bold;
+    font-size: 34px;
+    color: #f4f4ffa4;
+    line-height: 1.2;
+    text-transform: uppercase;
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+
+.iletisim-giris {
+    width: 100%;
+    background-color: #fff;
+    border-radius: 25px;
+    margin-bottom: 15px;
+    position: relative;
+    z-index: 1;
+}
+  
+.giris {
+    position: relative;
+    display: block;
+    width: 100%;
+    background: #fff;
+    transition: padding 0.3s 0.2s ease;
+    font-family: 'Inter';
+    font-size: 18px;
+    color: #8f8fa1;
+    line-height: 1.2;
+    transition: all .3s ease;
+}
+input.giris {
+    height: 62px;
+    padding: 0 35px 0 35px;
+}
+textarea.giris {
+    min-height: 169px;
+    padding: 19px 35px 0 35px;
+}
+  
+.iletisim-btn {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 10px;
+}
+
+.iletisim-btn i {
+    padding: 5px;
+}
+  
+.btn {
+    display: flex;
+    justify-content: center;
+    outline: none;
+    cursor: pointer;
+    border: none;
+    align-items: center;
+    padding: 0 20px;
+    min-width: 150px;
+    height: 62px;
+    background-color: transparent;
+    border-radius: 31px;
+    font-family: 'Inter';
+    font-size: 16px;
+    color: #fff;
+    line-height: 1.2;
+    text-transform: uppercase;
+    transition: all 0.4s;
+    position: relative;
+    background: rgb(129, 33, 33);
+    z-index: 1;
+}
+  
+.btn:hover {
+    transition: all 0.4s;
+    background-color: #580606;
+}
+

@@ -1,0 +1,520 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{955D159E-59BE-42D4-8353-F3995EFD542C}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HaberSitesiMVC</RootNamespace>
+    <AssemblyName>HaberSitesiMVC</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44337</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="PagedList, Version=1.17.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\PagedList.1.17.0.0\lib\net40\PagedList.dll</HintPath>
+    </Reference>
+    <Reference Include="PagedList.Mvc, Version=4.5.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\PagedList.Mvc.4.5.0.0\lib\net40\PagedList.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.7\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.7\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\ContactController.cs" />
+    <Compile Include="Controllers\GirisYapController.cs" />
+    <Compile Include="Controllers\HaberController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\RegisterController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Classes\Admin.cs" />
+    <Compile Include="Models\Classes\EklenecekHaberler.cs" />
+    <Compile Include="Models\Classes\Context.cs" />
+    <Compile Include="Models\Classes\Haber.cs" />
+    <Compile Include="Models\Classes\HaberYorum.cs" />
+    <Compile Include="Models\Classes\User.cs" />
+    <Compile Include="Models\Classes\Yorum.cs" />
+    <Compile Include="Models\Classes\İletisim.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="web\404.aspx.cs">
+      <DependentUpon>404.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="web\404.aspx.designer.cs">
+      <DependentUpon>404.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="web\exchange.aspx.cs">
+      <DependentUpon>exchange.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="web\exchange.aspx.designer.cs">
+      <DependentUpon>exchange.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="web\haberler\chinasandstorm.aspx.cs">
+      <DependentUpon>chinasandstorm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="web\haberler\chinasandstorm.aspx.designer.cs">
+      <DependentUpon>chinasandstorm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="web\haberler\tinder.aspx.cs">
+      <DependentUpon>tinder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="web\haberler\tinder.aspx.designer.cs">
+      <DependentUpon>tinder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="web\haberler\vw.aspx.cs">
+      <DependentUpon>vw.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="web\haberler\vw.aspx.designer.cs">
+      <DependentUpon>vw.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="web\hakkimizda.aspx.cs">
+      <DependentUpon>hakkimizda.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="web\hakkimizda.aspx.designer.cs">
+      <DependentUpon>hakkimizda.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="web\hotnews\coronavirus.aspx.cs">
+      <DependentUpon>coronavirus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="web\hotnews\coronavirus.aspx.designer.cs">
+      <DependentUpon>coronavirus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="web\hotnews\gazete.aspx.cs">
+      <DependentUpon>gazete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="web\hotnews\gazete.aspx.designer.cs">
+      <DependentUpon>gazete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="web\hotnews\windows.aspx.cs">
+      <DependentUpon>windows.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="web\hotnews\windows.aspx.designer.cs">
+      <DependentUpon>windows.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="web\hotnews\youtubevaccine.aspx.cs">
+      <DependentUpon>youtubevaccine.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="web\hotnews\youtubevaccine.aspx.designer.cs">
+      <DependentUpon>youtubevaccine.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="web\iletisim.aspx.cs">
+      <DependentUpon>iletisim.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="web\iletisim.aspx.designer.cs">
+      <DependentUpon>iletisim.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="web\index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="web\index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="web\login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="web\login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="web\register.aspx.cs">
+      <DependentUpon>register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="web\register.aspx.designer.cs">
+      <DependentUpon>register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="web\sondakika\alikoc.aspx.cs">
+      <DependentUpon>alikoc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="web\sondakika\alikoc.aspx.designer.cs">
+      <DependentUpon>alikoc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="web\sondakika\bebek.aspx.cs">
+      <DependentUpon>bebek.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="web\sondakika\bebek.aspx.designer.cs">
+      <DependentUpon>bebek.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="web\sondakika\benzin.aspx.cs">
+      <DependentUpon>benzin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="web\sondakika\benzin.aspx.designer.cs">
+      <DependentUpon>benzin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="web\sondakika\denizkirliligi.aspx.cs">
+      <DependentUpon>denizkirliligi.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="web\sondakika\denizkirliligi.aspx.designer.cs">
+      <DependentUpon>denizkirliligi.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="web\sondakika\dutch.aspx.cs">
+      <DependentUpon>dutch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="web\sondakika\dutch.aspx.designer.cs">
+      <DependentUpon>dutch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="web\sondakika\isvicre.aspx.cs">
+      <DependentUpon>isvicre.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="web\sondakika\isvicre.aspx.designer.cs">
+      <DependentUpon>isvicre.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="web\sondakika\kenansof.aspx.cs">
+      <DependentUpon>kenansof.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="web\sondakika\kenansof.aspx.designer.cs">
+      <DependentUpon>kenansof.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\PagedList.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="single.html" />
+    <Content Include="web2\about.html" />
+    <Content Include="web2\contact.html" />
+    <Content Include="web2\css\bootstrap.css" />
+    <Content Include="web2\css\style.css" />
+    <Content Include="web2\images\avatar.png" />
+    <Content Include="web2\images\icon3.png" />
+    <Content Include="web2\images\logo.jpg" />
+    <Content Include="web2\images\man.jpg" />
+    <Content Include="web2\images\more.png" />
+    <Content Include="web2\images\post1.jpg" />
+    <Content Include="web2\images\post2.jpg" />
+    <Content Include="web2\images\post3.jpg" />
+    <Content Include="web2\images\search.png" />
+    <Content Include="web2\index.html" />
+    <Content Include="web2\js\easing.js" />
+    <Content Include="web2\js\jquery.min.js" />
+    <Content Include="web2\js\move-top.js" />
+    <Content Include="web2\single.html" />
+    <Content Include="web2\w3layouts-License.txt" />
+    <Content Include="web\404.aspx" />
+    <Content Include="web\exchange.aspx" />
+    <Content Include="web\fav.ico" />
+    <Content Include="web\haberler\chinasandstorm.aspx" />
+    <Content Include="web\haberler\tinder.aspx" />
+    <Content Include="web\haberler\vw.aspx" />
+    <Content Include="web\hakkimizda.aspx" />
+    <Content Include="web\hotnews\coronavirus.aspx" />
+    <Content Include="web\hotnews\gazete.aspx" />
+    <Content Include="web\hotnews\windows.aspx" />
+    <Content Include="web\hotnews\youtubevaccine.aspx" />
+    <Content Include="web\iletisim.aspx" />
+    <Content Include="web\img\404.jpg" />
+    <Content Include="web\img\alikoc.jpg" />
+    <Content Include="web\img\alikoc2.jpg" />
+    <Content Include="web\img\avatar.svg" />
+    <Content Include="web\img\bebek.jpg" />
+    <Content Include="web\img\bebek2.jpg" />
+    <Content Include="web\img\benzin.jpg" />
+    <Content Include="web\img\benzin2.jpg" />
+    <Content Include="web\img\china.jpg" />
+    <Content Include="web\img\china2.jpg" />
+    <Content Include="web\img\denizkirliligi.jpg" />
+    <Content Include="web\img\dutc.jpg" />
+    <Content Include="web\img\dutc2.jpg" />
+    <Content Include="web\img\exchange.jpg" />
+    <Content Include="web\img\fav.ico" />
+    <Content Include="web\img\fav.png" />
+    <Content Include="web\img\hottpc1.jpg" />
+    <Content Include="web\img\hottpc2.jpg" />
+    <Content Include="web\img\hottpc3.jpg" />
+    <Content Include="web\img\hottpc4.jpg" />
+    <Content Include="web\img\isvicre.jpg" />
+    <Content Include="web\img\isvicre2.jpg" />
+    <Content Include="web\img\kenansof.jpg" />
+    <Content Include="web\img\kenansof2.jpg" />
+    <Content Include="web\img\korona2.jpg" />
+    <Content Include="web\img\log.png" />
+    <Content Include="web\img\logo.png" />
+    <Content Include="web\img\logoo.png" />
+    <Content Include="web\img\microsoft.jpg" />
+    <Content Include="web\img\news.jpg" />
+    <Content Include="web\img\pendikdeniz.jpg" />
+    <Content Include="web\img\pic.jpg" />
+    <Content Include="web\img\search.jpg" />
+    <Content Include="web\img\tinder.jpg" />
+    <Content Include="web\img\tinder2.jpg" />
+    <Content Include="web\img\unnamed.jpg" />
+    <Content Include="web\img\vaccine.jpg" />
+    <Content Include="web\img\vw.jpg" />
+    <Content Include="web\img\vw2.jpg" />
+    <Content Include="web\img\wave.jpg" />
+    <Content Include="web\index.aspx" />
+    <Content Include="web\login.aspx" />
+    <Content Include="web\register.aspx" />
+    <Content Include="web\scripts\404.css" />
+    <Content Include="web\scripts\aboutus.css" />
+    <Content Include="web\scripts\contact.css" />
+    <Content Include="web\scripts\exchange.css" />
+    <Content Include="web\scripts\haber.css" />
+    <Content Include="web\scripts\haberpre.js" />
+    <Content Include="web\scripts\logreg.css" />
+    <Content Include="web\scripts\logreg.js" />
+    <Content Include="web\scripts\main.css" />
+    <Content Include="web\scripts\main.js" />
+    <Content Include="web\scripts\mainpreload.js" />
+    <Content Include="web\scripts\preloadhaber.js" />
+    <Content Include="web\scripts\main2.css" />
+    <Content Include="web\sondakika\alikoc.aspx" />
+    <Content Include="web\sondakika\bebek.aspx" />
+    <Content Include="web\sondakika\benzin.aspx" />
+    <Content Include="web\sondakika\denizkirliligi.aspx" />
+    <Content Include="web\sondakika\dutch.aspx" />
+    <Content Include="web\sondakika\isvicre.aspx" />
+    <Content Include="web\sondakika\kenansof.aspx" />
+    <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.4.1.js" />
+    <Content Include="Scripts\jquery-3.4.1.min.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="web\img\china.webp" />
+    <Content Include="Views\Contact\Index.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Haber\HaberDetay.cshtml" />
+    <Content Include="Views\Haber\Index.cshtml" />
+    <Content Include="Views\Home\SolAlt.cshtml" />
+    <Content Include="Views\Home\SolAlt2.cshtml" />
+    <Content Include="Views\Home\SolAlt3.cshtml" />
+    <Content Include="Views\Home\SonDakika.cshtml" />
+    <Content Include="Views\Haber\Search.cshtml" />
+    <Content Include="Views\Haber\YorumYap.cshtml" />
+    <Content Include="Views\GirisYap\Login.cshtml" />
+    <Content Include="Views\Shared\_AdminLayout.cshtml" />
+    <Content Include="Views\Admin\Index.cshtml" />
+    <Content Include="Views\Admin\YeniHaber.cshtml" />
+    <Content Include="Views\Admin\HaberGetir.cshtml" />
+    <Content Include="Views\Admin\ComingNews.cshtml" />
+    <Content Include="Views\Admin\ComingNewsGetir.cshtml" />
+    <Content Include="Views\Admin\Iletisim.cshtml" />
+    <Content Include="Views\Admin\YorumListesi.cshtml" />
+    <Content Include="Views\Admin\YorumGetir.cshtml" />
+    <Content Include="Views\Haber\IndexSearch.cshtml" />
+    <Content Include="Views\GirisYap\UserLogin.cshtml" />
+    <Content Include="Views\_ViewImports.cshtml" />
+    <Content Include="Views\Register\UserRegister.cshtml" />
+    <Content Include="Views\Admin\Kullanici.cshtml" />
+    <Content Include="Views\Admin\IletisimGetir.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>49990</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44337/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Bu proje bu bilgisayarda olmayan NuGet paketlerine başvuru yapıyor. Bunları indirmek için NuGet Paket Geri Yükleme'yi kullanın. Daha fazla bilgi için, bkz. http://go.microsoft.com/fwlink/?LinkID=322105. Eksik dosya: {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

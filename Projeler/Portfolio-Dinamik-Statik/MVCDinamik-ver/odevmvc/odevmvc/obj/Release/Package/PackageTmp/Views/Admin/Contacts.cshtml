@@ -1,0 +1,40 @@
+﻿
+@{
+    ViewBag.Title = "Contacts";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+@using odevmvc.Models.Classes
+@model List<contact>
+
+<h1 class="title-page">İletişim</h1>
+
+<p class="desc-page">Son eklenenden, ilk eklenene doğru sıralanmıştır.</p>
+<table class="table-mine" id="projects">
+    <thead>
+        <tr>
+            <th scope="col"><i class="fas fa-id-card-alt"></i> ID</th>
+            <th scope="col"><i class="fas fa-file-signature"></i> İsim</th>
+            <th scope="col"><i class="fas fa-table"></i> Konu</th>
+            <th scope="col"><i class="fas fa-heading"></i> Email</th>
+            <th scope="col"><i class="fas fa-heading"></i> Mesaj</th>
+            <th scope="col">Sil</th>
+            <th scope="col">Cevapla</th>
+        </tr>
+    </thead>
+    @foreach (var x in Model)
+    {
+        <tbody>
+            <tr>
+                <th scope="row">@x.ID</th>
+                <td>@x.Name</td>
+                <td>@x.Subject</td>
+                <td>@x.Email</td>
+                <td>@x.Message</td>
+                 <td><a href="/Admin/ContactDelete/@x.ID" class="delete"><i class="fas fa-trash-alt"></i></a></td>
+                 <td><a href="/Admin/SendMail/@x.ID" class="edit"><i class="fas fa-edit"></i></a></td>
+            </tr>
+        </tbody>
+    }
+</table>
+

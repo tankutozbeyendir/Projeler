@@ -1,0 +1,39 @@
+﻿
+@{
+    ViewBag.Title = "AdminAccount";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+@using odevmvc.Models.Classes
+@model List<admin>
+
+<h1 class="title-page">Admin hesapları</h1>
+
+    <div class="add-div">
+        <a href="/Admin/addAccount/" class="add"><i class="fas fa-plus"></i></a>
+    </div>
+
+    <table class="table-mine" id="projects">
+        <thead>
+            <tr>
+                <th scope="col"><i class="fas fa-id-card-alt"></i> ID</th>
+                <th scope="col"><i class="fas fa-file-signature"></i> Admin Username</th>
+                <th scope="col"><i class="fas fa-key"></i> Admin Password</th>
+                <th scope="col">Sil</th>
+                <th scope="col">Düzenle</th>
+            </tr>
+        </thead>
+        @foreach (var x in Model)
+        {
+            <tbody>
+                <tr>
+                    <th scope="row">@x.ID</th>
+                    <td>@x.User</td>
+                    <td>@x.Password</td>
+                    <td><a href="/Admin/DeleteAccount/@x.ID" class="delete"><i class="fas fa-trash-alt"></i></a></td>
+                    <td><a href="/Admin/getAccount/@x.ID" class="edit"><i class="fas fa-edit"></i></a></td>
+                   
+                 
+                </tr>
+            </tbody>
+        }
+    </table>

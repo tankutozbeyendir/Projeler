@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#252525"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+
+    tools:context=".LauncherActivity">
+
+    <ImageView
+        android:layout_width="500dp"
+        android:layout_height="350dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/logo"
+        ></ImageView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="sans-serif-thin"
+        android:text="Hoşgeldiniz"
+        android:textColor="#812121"
+        android:textSize="50dp"
+        ></TextView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kullanım şartlarımızı görüntülemek için tıklayınız"
+        android:layout_marginTop="30dp"
+        android:textStyle="bold"
+        android:id="@+id/kullanimsarti"
+        android:textColor="#fdfdfd"
+        android:textSize="14dp"
+
+        ></TextView>
+
+
+
+    <Button
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/button"
+        android:fontFamily="sans-serif-condensed-light"
+        android:text="Giriş yap"
+        android:textColor="#fff"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:id="@+id/btngiris"
+        app:backgroundTint="#812121"></Button>
+
+    <Button
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/button"
+        android:fontFamily="sans-serif-condensed-light"
+        android:text="Kayıt ol"
+        android:textColor="#fff"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:id="@+id/btnkayit"
+        app:backgroundTint="#812121"></Button>
+
+
+
+</LinearLayout>

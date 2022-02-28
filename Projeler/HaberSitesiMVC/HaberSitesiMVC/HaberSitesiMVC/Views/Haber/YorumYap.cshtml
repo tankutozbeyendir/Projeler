@@ -1,0 +1,35 @@
+﻿
+
+<div class="content-form" style="display:none">
+    @if (Session["username"] != null)
+    {
+        <h3>YORUM YAP</h3>
+        <form method="post">
+            <input type="hidden" placeholder="ID" name="haberid" value="@ViewBag.deger" required />
+            <input type="hidden" placeholder="KULLANICI ADI" name="kullanici" value="@Session["username"].ToString()" required />
+            <input type="hidden" placeholder="EMAIL" name="mail" value="@Session["email"].ToString()" required />
+            <input type="hidden" placeholder="onay" name="IsApproved" value="false" required />
+            <textarea placeholder="MESAJ" name="yorumlar"></textarea>
+            <input type="submit" value="GONDER" />
+            @ViewBag.Mesajj
+        </form>
+    }
+    else if (Session["kullanici"] != null)
+    {
+        <h3>YORUM YAP</h3>
+        <form method="post">
+            <input type="hidden" placeholder="ID" name="haberid" value="@ViewBag.deger" required />
+            <input type="hidden" placeholder="KULLANICI ADI" name="kullanici" value="@Session["kullanici"].ToString()" required />
+            <input type="hidden" placeholder="EMAIL" name="mail" value="onemlidegil@gmail.com" required />
+            <textarea placeholder="MESAJ" name="yorumlar"></textarea>
+            <input type="submit" value="GONDER" />
+            @ViewBag.Mesajj
+        </form>
+    }
+    else
+    {
+        <p style="margin-left:200px; font-family:'montserrat';">Yorum Yapabilmek için giriş yapmanız gerekiyor.</p>
+    }
+
+</div>
+

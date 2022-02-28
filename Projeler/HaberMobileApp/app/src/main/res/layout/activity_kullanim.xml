@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".KullanimActivity"
+    android:background="#252525"
+    >
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    <ImageView
+        android:layout_width="500dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/logo"
+        android:id="@+id/lgo"
+    ></ImageView>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:id="@+id/text1"
+        android:layout_below="@id/lgo"
+        android:textColor="#fdfdfd"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-thin"
+        android:textSize="16dp"
+        android:text="1- Cihaz Bilgisi’ne Erişilmesi,
+Kullanıcılar Mobil Uygulamayı yükleyerek giriş yaptıklarında cihaz bilgileri (cihazın ekranının açık olup olmama, GPS ayarının durumuna dair bilgiler), kişi bilgilerine ulaşılabilecektir."
+        android:paddingTop="20dp"
+        ></TextView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:id="@+id/text2"
+        android:layout_below="@id/text1"
+        android:paddingTop="20dp"
+        android:textColor="#fdfdfd"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-thin"
+        android:textSize="16dp"
+        android:text="2- Bilgilerin Kullanılması,
+***** olarak Kullanıcının uygulama kullanım süreleri boyunca hiçbir kişisel verisi tarafımıza ait veri depolama alanlarında tutulmamaktadır. Kullanıcıya ait uygulama içerisindeki bilgiler (tercihler) Kullanıcının tercihlerini sıfırlaması, uygulamayı kaldırması gibi aksiyonlar ile cihaz içerisinden silinebilir."
+        ></TextView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:id="@+id/text3"
+        android:layout_below="@id/text2"
+        android:textColor="#fdfdfd"
+        android:textStyle="bold"
+        android:paddingTop="20dp"
+        android:fontFamily="sans-serif-thin"
+        android:textSize="16dp"
+        android:text="3- Kullanıcı İzinleri,
+Uygulamanın özelliklerinin cihaz ile uyumlu çalışabilmesi için Kullanıcı tarafından onaylanması gereken ve onaylanmadan alınmış izinlerdir."
+        ></TextView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:id="@+id/text4"
+        android:layout_below="@id/text3"
+        android:textColor="#fdfdfd"
+        android:paddingTop="20dp"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-thin"
+        android:textSize="16dp"
+        android:text="3- İnternet İzni,
+Bu izin uygulamanın çalışması esnasında kurumun merkezi sunucusu üzerinde bulunan servislere erişimi için kullanılır. Bu erişim esnasında kullanılacak olan internet bağlantısı kullanıcı sorumluluğundadır."
+        ></TextView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:id="@+id/text5"
+        android:layout_below="@id/text4"
+        android:textColor="#fdfdfd"
+        android:paddingTop="20dp"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-thin"
+        android:textSize="16dp"
+        android:text="4- Depolama İzni,
+Bu izin cihazın belleğinde uygulama içerisinde kullanılan ikonların ve uygulamaya ait veri tabanının saklanmasına olanak verir."
+        ></TextView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:id="@+id/text6"
+        android:layout_below="@id/text5"
+        android:textStyle="bold"
+        android:paddingTop="20dp"
+        android:textColor="#fdfdfd"
+        android:fontFamily="sans-serif-thin"
+        android:textSize="16dp"
+        android:text="5- Fikri Mülkiyet Hakları,
+Uygulamanın (genel görünüm, tasarım, metin, imge, logo, ikon, yazılı, elektronik, grafik veya makinede okunabilir şekilde sunulan teknik verileri, *** markası, uygulanan iş metodu ve iş modeli, yazılım kodu ve diğer kodlar da dahil ve fakat bunlarla sınırlı olmamak kaydıyla) tüm unsurları ***’a aittir ve/veya *** tarafından üçüncü bir kişiden alınan telif hakkı altında kullanılmaktadır."
+        ></TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:id="@+id/text7"
+            android:layout_below="@id/text6"
+            android:paddingTop="20dp"
+            android:textStyle="bold"
+            android:textColor="#fdfdfd"
+            android:fontFamily="sans-serif-thin"
+            android:textSize="16dp"
+            android:text="6-Garanti Vermeme: İŞBU SÖZLEŞME MADDESİ UYGULANABİLİR KANUNUN İZİN VERDİĞİ AZAMİ ÖLÇÜDE GEÇERLİ OLACAKTIR. FİRMA TARAFINDAN SUNULAN HİZMETLER OLDUĞU GİBİ VE MÜMKÜN OLDUĞU TEMELDE SUNULMAKTA VE PAZARLANABİLİRLİK, BELİRLİ BİR AMACA UYGUNLUK VEYA İHLAL ETMEME KONUSUNDA TÜM ZIMNİ GARANTİLER DE DÂHİL OLMAK ÜZERE HİZMETLER VEYA UYGULAMA İLE İLGİLİ OLARAK (BUNLARDA YER ALAN TÜM BİLGİLER DÂHİL) SARİH VEYA ZIMNİ, KANUNİ VEYA BAŞKA BİR NİTELİKTE HİÇBİR GARANTİDE BULUNMAMAKTADIR."></TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:id="@+id/text8"
+            android:paddingTop="20dp"
+            android:layout_below="@id/text7"
+            android:textStyle="bold"
+            android:textColor="#fdfdfd"
+            android:fontFamily="sans-serif-thin"
+            android:textSize="16dp"
+            android:text="7-İşbu Sözleşme’nin uygulanmasından veya yorumlanmasından doğacak her türlü uyuşmazlığın çözümünde İstanbul (Merkez) Adliyesi Mahkemeleri ve İcra Daireleri yetkilidir."></TextView>
+
+    </RelativeLayout>
+</ScrollView>

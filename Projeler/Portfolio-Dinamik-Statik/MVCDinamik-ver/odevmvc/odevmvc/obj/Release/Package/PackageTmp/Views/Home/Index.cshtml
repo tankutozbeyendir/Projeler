@@ -1,0 +1,40 @@
+﻿    
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+@using odevmvc.Models.Classes
+@model List<project>
+
+<section id="hakkimizda">
+    <div class="hakkimizda-sol">
+        <h1 class="yazi-1">I am a</h1>
+        <h1 class="yazi-2">Programmer</h1>
+    </div>
+    <div class="hakkimizda-sag">
+        <img src="~/images/user.png" alt="">
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat, nulla cupiditate omnis vero harum, delectus deleniti at veniam quaerat illo beatae, impedit neque quae quis saepe illum. Consequatur, pariatur eos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, dignissimos et! Libero, quos. Ullam assumenda voluptas porro, autem dolorem maxime dolor molestias amet ipsum ratione veritatis placeat facilis, deserunt modi?</p>
+    </div>
+</section>
+<section id="projeler">
+    <div class="pj-alan">
+        <div class="pj-ic-alan">
+            @foreach (var x in Model)
+            {
+                <div class="pj-eleman">
+                    <a href="/Home/ProjectDetail/@x.ID"><img src="@x.Image" alt="img3"></a>
+                    <h1>@x.Title</h1>
+                    <p class="tarih-yazar">@x.Date.ToString(string.Format("dd/MM/yyyy"))   |   @x.Author</p>
+                    <p class="aciklama">@x.Description.Substring(0, 110)...</p>
+                    <a href="/Home/ProjectDetail/@x.ID" style="color:#fff; font-weight:bolder; font-size:15px;">Devamını oku...</a>
+                </div>
+            }
+        </div>
+
+    </div>
+
+    <a href="#" class="yukaricik"><i class="fas fa-arrow-up"></i></a>
+</section>
+

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#252525"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:layout_width="500dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/logo"
+        ></ImageView>
+
+    <EditText
+
+        android:id="@+id/username"
+        android:layout_width="350dp"
+        android:layout_height="45dp"
+        android:textColor="#fdfdfd"
+        android:textStyle="bold"
+        android:drawableStart="@drawable/username"
+        android:drawableLeft="@drawable/username"
+        android:drawablePadding="5dp"
+        android:drawableTint="#812121"
+        android:layout_marginTop="30dp"
+        android:paddingLeft="20dp"
+        android:background="@drawable/forget"
+        android:hint="Kullanıcı adı"
+        android:textColorHint="#FDFDFD"
+        ></EditText>
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="350dp"
+        android:layout_height="45dp"
+        android:drawableStart="@drawable/password"
+        android:drawableLeft="@drawable/password"
+        android:drawablePadding="5dp"
+        android:drawableTint="#812121"
+        android:inputType="textPassword"
+        android:textStyle="bold"
+        android:textColor="#fdfdfd"
+        android:layout_marginTop="30dp"
+        android:paddingLeft="20dp"
+        android:hint="Şifre"
+        android:textColorHint="#FDFDFD"
+        android:background="@drawable/forget"
+        ></EditText>
+
+    <EditText
+        android:id="@+id/repassword"
+        android:layout_width="350dp"
+        android:layout_height="45dp"
+        android:drawableStart="@drawable/password"
+        android:drawableLeft="@drawable/password"
+        android:drawablePadding="5dp"
+        android:drawableTint="#812121"
+        android:inputType="textPassword"
+        android:layout_marginTop="30dp"
+        android:hint="Şifre tekrar"
+        android:background="@drawable/forget"
+        android:textStyle="bold"
+        android:textColor="#fdfdfd"
+        android:textColorHint="#FDFDFD"
+        android:paddingLeft="20dp"
+        ></EditText>
+
+    <Button
+        android:id="@+id/btnSignUp"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/button"
+        android:fontFamily="sans-serif-thin"
+        android:text="Kayıt ol"
+        android:textAllCaps="false"
+        android:textColor="#fff"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:backgroundTint="#812121"></Button>
+
+    <TextView
+        android:id="@+id/btnSignIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:fontFamily="sans-serif-thin"
+        android:layout_gravity="center"
+        android:text="Hesabınız var mı? giriş yapın."
+        android:textAllCaps="false"
+        android:textColor="#fff"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:backgroundTint="#812121"></TextView>
+
+
+
+
+
+</LinearLayout>

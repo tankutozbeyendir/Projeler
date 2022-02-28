@@ -1,0 +1,37 @@
+﻿@using HaberSitesiMVC.Models.Classes
+@{
+    ViewBag.Title = "Iletisim";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>İletişim Listesi</h2>
+
+<br />
+<br />
+<div class="table-responsive">
+    <table class="table table-bordered" style="width:100%; overflow:scroll;">
+        <tr>
+            <th>ID</th>
+            <th>ISIM SOYISIM</th>
+            <th>MAIL</th>
+            <th>KONU</th>
+            <th>MESAJ</th>
+            <th>MESAJI GÖRÜNTÜLE</th>
+            <th>SİL</th>
+        
+            @foreach (var x in Model)
+            {
+                <tr>
+                    <td>@x.ID</td>
+                    <td>@x.adsoyad</td>
+                    <td>@x.mail</td>
+                    <td>@x.konu</td>
+                    <td>@x.mesaj</td>
+                    <td><a href="/Admin/IletisimGetir/@x.ID" class="btn btn-success">MESAJI GÖRÜNTÜLE</a></td>
+                    <td><a href="/Admin/IletisimSil/@x.ID" class="btn btn-danger">SİL</a></td>
+                </tr>
+            
+        }
+        
+    </table>
+</div>

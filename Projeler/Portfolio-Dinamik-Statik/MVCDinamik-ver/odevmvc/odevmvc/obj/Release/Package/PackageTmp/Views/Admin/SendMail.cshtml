@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewBag.Title = "SendMail";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+@using odevmvc.Models.Classes
+@model List<contact>
+<h2>Email Gönder</h2>
+@if(ViewBag.msg!=null)
+{
+     <div class="alert alert-success">@ViewBag.msg</div>
+ }
+@using (Html.BeginForm("SendMail", "Admin", FormMethod.Post, new { enctype="multipart/form-data"}))
+{
+<div class="input-group col-md-3">
+    @foreach (var x in Model)
+    {
+        <input type="text" class="form-control" name="useremail" value="@x.Email" required />
+    }
+    <input type="text" class="form-control" name="subject" required />
+    <input type="text" class="form-control" name="body" required />
+    <div class="input-group-btn">
+        <button class="btn btn-success" type="submit">
+            <i class="glyphicon glyphicon-send"></i>
+        </button>
+    </div>
+</div>
+}
+<hr />

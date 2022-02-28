@@ -1,0 +1,42 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+@using odevmvc.Models.Classes
+@model List<project>
+
+<h1 class="title-page">Projeler</h1>
+
+<p class="desc-page">Son eklenenden, ilk eklenene doğru sıralanmıştır.</p>
+
+    <div class="add-div">
+        <a href="/Admin/AddProject/" class="add"><i class="fas fa-plus"></i></a>
+    </div>
+
+    <table class="table-mine" id="projects">
+        <thead>
+            <tr>
+                <th scope="col"><i class="fas fa-id-card-alt"></i> ID</th>
+                <th scope="col"><i class="fas fa-file-signature"></i> Proje ismi</th>
+                <th scope="col"><i class="fas fa-table"></i> Tarih</th>
+                <th scope="col"><i class="fas fa-heading"></i> Açıklama</th>
+                <th scope="col">Sil</th>
+                <th scope="col">Düzenle</th>
+            </tr>
+        </thead>
+        @foreach (var x in Model)
+        {
+            <tbody>
+                <tr>
+                    <th scope="row">@x.ID</th>
+                    <td>@x.Title</td>
+                    <td>@x.Date.ToString(string.Format("dd/MM/yyyy"))</td>
+                    <td>@x.Description.Substring(0, 110)...</td>
+                    <td><a href="/Admin/DeleteProject/@x.ID" class="delete"><i class="fas fa-trash-alt"></i></a></td>
+                    <td><a href="/Admin/getProject/@x.ID" class="edit"><i class="fas fa-edit"></i></a></td>
+                </tr>
+            </tbody>
+        }
+    </table>
+

@@ -1,0 +1,116 @@
+﻿@model HaberSitesiMVC.Models.Classes.HaberYorum
+@{
+    ViewBag.Title = "HaberDetay";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<html>
+<head>
+    <link href="~/web2/css/style.css" rel='stylesheet' type='text/css' />
+</head>
+<body>
+    <main>
+
+
+
+        <section class="haber">
+            @foreach (var x in Model.Deger1)
+            {
+                <div class="haberalani">
+                    <h6>@x.baslik</h6>
+                    <br />
+                    <img src="@x.haberimage">
+
+                    @*<div class="tarihsaat" style="float:left"><p><i class="far fa-clock"></i>  @x.tarih.ToString("dd.MM.yyyy hh:ss") </p></div>*@
+                    <br />
+                    <div style="width:800px; margin-left:410px; font-family:'Oswald'">Editör : @x.editor &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="far fa-clock"></i>  @x.tarih.ToString("dd.MM.yyyy  HH:ss")</div>
+                    <br />
+                    <p>
+                        @x.aciklama
+                    </p>
+                    <img src="@x.haberimage2">
+                    <p>
+                        @x.aciklama2
+                    </p>
+                </div>
+            }
+
+
+            <div class="yorumlarGoruntule" style="width: 800px; margin-left:400px; cursor: pointer; height: 50px; background-color: green; border-radius: 5px; text-align: center; margin-bottom: 50px;">
+                <h3 style="padding-top:15px; color:#fff; text-shadow:1px 1px 1px black; font-size: 20px; text-transform:uppercase; letter-spacing: 1px;">Yorumları Görüntüle</h3>
+            </div>
+            <div class="yorumlarKapat" style="width: 800px; cursor: pointer; margin-left: 400px; height: 50px; background-color: red; border-radius: 5px; display: none; text-align: center; margin-bottom: 50px;">
+                <h3 style="padding-top:15px; color:#fff; text-shadow:1px 1px 1px black; font-size: 20px; text-transform:uppercase; letter-spacing: 1px;">Yorumları Kapat</h3>
+            </div>
+
+
+            <div class="single" style="display:none;">
+                <div class="container">
+                    <div class="col-md-8 single-main">
+                        @foreach (var x in Model.Deger2)
+                        {
+                            <ul class="comment-list">
+                                <li>
+                                    <img src="~/web2/images/avatar.png" class="img-responsive" alt="">
+                                    <div class="desc">
+                                        <p>@x.kullanici</p>
+                                        <br />
+                                        <br />
+                                        <p>@x.yorumlar</p>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </li>
+                            </ul>
+                        }
+
+                        @Html.Action("YorumYap", "Haber")
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+
+
+
+
+        <section class="main-container-right" id="sondakika">
+            <h2>Son dakika</h2>
+            @foreach (var x in Model.Deger3)
+            {
+                <article>
+                    <h4>son dakika </h4>
+                    <div>
+                        <h2>@x.baslik</h2>
+
+                        <p>@x.aciklama.Substring(0, 100)...</p>
+
+                        <a href="/Haber/HaberDetay/@x.ID">Habere git <span>>></span></a>
+                    </div>
+                    <img src="@x.haberimage">
+                </article>
+            }
+
+
+
+        </section>
+
+    </main>
+    <script>
+        $(document).ready(function () {
+            $(".yorumlarGoruntule").click(function () {
+                $(".content-form").show("slow");
+                $(".yorumlarKapat").show("slow");
+                $(".single").show("slow");
+                $(".yorumlarGoruntule").hide("slow");
+            });
+
+            $(".yorumlarKapat").click(function () {
+                $(".content-form").hide("slow");
+                $(".yorumlarGoruntule").show("slow");
+                $(".single").hide("slow");
+                $(".yorumlarKapat").hide("slow");
+            });
+        });
+    </script>
+</body>
+</html>

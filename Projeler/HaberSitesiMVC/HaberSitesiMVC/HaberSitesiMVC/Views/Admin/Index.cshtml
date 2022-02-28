@@ -1,0 +1,33 @@
+﻿    @using HaberSitesiMVC.Models.Classes
+@model List<Haber>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Haber Listesi</h2>
+
+<br />
+<a href="/Admin/YeniHaber/" class="btn btn-primary">YENİ HABER</a>
+<br />
+<br />
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>BAŞLIK</th>
+        <th>SİL</th>
+        <th>GÜNCELLE</th>
+        <th>DETAYLAR</th>
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.ID</td>
+            <td>@x.baslik</td>
+            <td><a href="/Admin/HaberSil/@x.ID" class="btn btn-danger">SİL</a></td>
+            <td><a href="/Admin/HaberGetir/@x.ID" class="btn btn-warning">GÜNCELLE</a></td>
+            <td><a href="/Haber/HaberDetay/@x.ID" class="btn btn-default">DETAYLAR</a></td>
+        </tr>
+    }
+
+</table>

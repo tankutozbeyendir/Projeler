@@ -1,0 +1,14 @@
+﻿@foreach (var x in Model.Deger1)
+{
+    <article>
+        <figure><a href="/Haber/HaberDetay/@x.ID"><img src="@x.haberimage" alt="" class="imghover" /></a></figure>
+        <div>
+            <h3>@x.baslik</h3>
+            <p style="font-family:'Montserrat'">Editör : @x.editor</p><br />
+            <p>@x.aciklama.Substring(0, 50)...</p>
+
+            <a href="/Haber/HaberDetay/@x.ID">Habere git <span>>></span></a>
+
+        </div>
+    </article>
+}

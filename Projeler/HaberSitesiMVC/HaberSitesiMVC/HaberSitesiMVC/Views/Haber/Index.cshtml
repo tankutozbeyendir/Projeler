@@ -1,0 +1,194 @@
+﻿@model HaberSitesiMVC.Models.Classes.HaberYorum
+@using PagedList
+@using PagedList.Mvc
+@{
+    Layout = null;
+}
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Tankut Özbeyendir, Mert Orak">
+    <meta name="keywords" content="habersitesi, blog, news, haberler, siyaset, bilim, yazılım">
+    <meta name="description" content="Haber sitesi">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <link rel="icon" href="~/web/img/fav.png" type="image/x-icon" />
+    <link rel="stylesheet" href="~/web/scripts/main2.css" type="text/css">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;500&family=Quicksand:wght@300;500&family=Roboto:wght@100;400;500;900&family=Shippori+Mincho:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Exo:wght@200&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap" rel="stylesheet">
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/a981a7918e.js" crossorigin="anonymous"></script>
+    <title>Haber Portal Sitesi | BANDIRMA MYÖ</title>
+</head>
+
+
+<body class="loading">
+
+
+    <!-- header -->
+    <header id="anasayfa">
+        <div class="top-top">
+            @**@
+            <div class="login">
+                @if (Session["username"] != null)
+                {
+                    <p style="font-size:15px; font-family:'Montserrat'">Hoşgeldiniz, @Session["username"].ToString()</p>
+                    <br />
+                    <a href="/Home/LogOut" style="color:#fff; font-size:13px; font-family:'Montserrat';">Çıkış yap</a>
+                }
+                else if (Session["kullanici"] != null)
+                {
+                    <p style="font-size:15px; font-family:'Montserrat'">Hoşgeldiniz, @Session["kullanici"].ToString()</p>
+                    <br />
+                    <a href="/Admin/Index" style="color:#fff; font-size:13px; font-family:'Montserrat';">Admin Sayfasına dön</a>
+                    <br />
+                    <br />
+                    <a href="/GirisYap/LogOut" style="color:#fff; font-size:13px; font-family:'Montserrat';">Çıkış yap</a>
+                }
+                else
+                {
+                    <a href="/GirisYap/UserLogin" style="color:#fff; font-size:13px; font-family:'Montserrat';">Giriş Yap</a>
+                    <a href="/Register/UserRegister" style="color: #fff; font-size: 13px; font-family: 'Montserrat'; margin-left: 20px;">Kayıt Ol</a>
+                }
+            </div>
+            @*<div class="top-info-class" id="top-info" style="margin-top:80px; margin-right:130px; width:1120px; height:40px;">
+                    <i class="fas fa-calendar-week" style="padding:10px;"></i><asp:Label Text="text" style="border-bottom:1px solid rgba(155,155,155,0.2); border-right:1px solid rgba(155,155,155,0.2); border-top:1px solid rgba(155,155,155,0.2); border-left: 1px solid rgba(155,155,155,0.2);   width:10vh; height:4vh;  position:relative; margin-right:5vh;  padding:1vh;" runat="server" ID="todaydatetext" Font-Names="Oswald" ForeColor="#F9F9F9" />
+                    <i class="fas fa-cloud" style="padding:10px;"></i><asp:Label Text="Istanbul 23°" style="border-bottom:1px solid rgba(155,155,155,0.2); border-right:1px solid rgba(155,155,155,0.2); border-top:1px solid rgba(155,155,155,0.2); border-left: 1px solid rgba(155,155,155,0.2); width:10vh; height:4vh;  position:relative; margin-right:5vh;  padding:1vh;" runat="server" ID="weathercondition" Font-Names="Oswald" ForeColor="#F9F9F9" />
+                    <div class="tooltip"><i class="fas fa-exchange-alt" style="padding:10px;"><span class="tooltiptext">Amerikan Doları</span></i></div><asp:Label Text="text" runat="server" ID="dolartext" style="border-bottom:1px solid rgba(155,155,155,0.2); border-right:1px solid rgba(155,155,155,0.2); border-top:1px solid rgba(155,155,155,0.2); border-left: 1px solid rgba(155,155,155,0.2); width:10vh; height:4vh;  position:relative; margin-right:5vh;  padding:1vh;" Font-Names="Oswald" ForeColor="#f9f9f9" />
+                    <div class="tooltip"><i class="fas fa-exchange-alt" style="padding:10px;"><span class="tooltiptext">Avustralya Doları</span></i></div><asp:Label Text="text" runat="server" ID="australiatext" style="border-bottom:1px solid rgba(155,155,155,0.2); border-right:1px solid rgba(155,155,155,0.2); border-top:1px solid rgba(155,155,155,0.2); border-left: 1px solid rgba(155,155,155,0.2);width:10vh; height:4vh; ; position:relative; margin-right:5vh;  padding:1vh;" Font-Names="Oswald" ForeColor="#f9f9f9" />
+                    <div class="tooltip"><i class="fas fa-exchange-alt" style="padding:10px;"><span class="tooltiptext">Euro</span></i></div><asp:Label Text="text" runat="server" ID="eurotext" style="border-bottom:1px solid rgba(155,155,155,0.2); border-right:1px solid rgba(155,155,155,0.2); border-top:1px solid rgba(155,155,155,0.2); border-left: 1px solid rgba(155,155,155,0.2);width:10vh; height:4vh; position:relative; margin-right:5vh;  padding:1vh;" Font-Names="Oswald" ForeColor="#f9f9f9" />
+                    <div class="tooltip"><i class="fas fa-exchange-alt" style="padding:10px;"><span class="tooltiptext">İngiliz Sterlini</span></i></div><asp:Label Text="text" runat="server" ID="sterlintext" style="border-bottom:1px solid rgba(155,155,155,0.2); border-right:1px solid rgba(155,155,155,0.2); border-top:1px solid rgba(155,155,155,0.2); border-left: 1px solid rgba(155,155,155,0.2); width:10vh; height:4vh;  position:relative; margin-right:5vh;  padding:1vh;" Font-Names="Oswald" ForeColor="#f9f9f9" />
+                </div>*@
+            <div class="information-2" style="margin-top:80px; margin-right:50px;">
+                <p><i class="fab fa-whatsapp"></i>   05356338732</p>
+            </div>
+
+        </div>
+        <div class="navigation-container">
+            <div class="top-head">
+                <div class="web-name">
+                    <img src="~/web/img/logoo.png">
+                </div>
+                <div class="ham-btn">
+                    <span>
+                        <i class="fas fa-bars"></i>
+                    </span>
+                </div>
+                <div class="times-btn">
+                    <span>
+                        <i class="fas fa-times"></i>
+                    </span>
+                </div>
+            </div>
+            <!-- nav bar -->
+            <div class="nav-bar" id="nav-bar">
+                <nav>
+                    <ul>
+                        <li><a href="/Home/Index"><i class="fas fa-home"></i> Anasayfa</a></li>
+                        <li><a href="/Home/Index/#sondakika"><i class="far fa-newspaper"></i> Son dakika</a></li>
+                        <li><a href="/Haber/Index/"><i class="far fa-newspaper"></i> Haberler</a></li>
+                        <li><a href="https://www.youtube.com"><i class="fas fa-wifi"></i> Canlı yayın</a></li>
+                        <li><a href="/Home/About/"><i class="far fa-address-card"></i> Hakkımızda</a></li>
+                        <li><a href="/Contact/Index/"><i class="far fa-id-card"></i> İletişim</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+
+
+            <!--social icons -->
+            <div class="social-icons">
+                <ul>
+                    <li>
+                        <a href="https://www.facebook.com"><i class="fab fa-facebook"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.twitter.com"><i class="fab fa-twitter"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com"><i class="fab fa-youtube"></i></a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </header>
+    @Html.Action("Search", "Haber")
+
+    @foreach (var x in Model.PagedLogs)
+    {
+        <section class="haber">
+            <div class="haberalani">
+                <img src="@x.haberimage">
+                <div class="asd">
+                    <h6>@x.baslik</h6>
+                </div>
+                <p style="font-weight:400;">EDİTÖR :<span> @x.editor</span></p>
+                <p><i class="far fa-clock"></i>  @x.tarih.ToString("dd.MM.yyyy, hh:mm")</p>
+                <p>
+                    @x.aciklama.Substring(0, 100) ...
+                </p>
+                <a href="/Haber/HaberDetay/@x.ID">Habere git <span>>></span></a>
+
+            </div>
+        </section>
+    }
+    @Html.PagedListPager(Model.PagedLogs, sayfa => Url.Action("Index", new { sayfa }))
+
+
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-left">
+                <h2>HABER PORTAL</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+                <br />
+                <br />
+                <p>admin@haberportal.com</p>
+            </div>
+
+
+
+            <div class="footer-right">
+                <h2>Bizimle iletişime geçin!</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                <i class="fas fa-file-signature"></i><a href="/Contact/Index/">İletişim Sayfası</a>
+            </div>
+
+
+        </div>
+        <p>Copyright &copy; 2021 tüm hakları saklıdır |  Tankut Özbeyendir, Mert Orak</p>
+    </footer>
+
+
+
+    <a href="#anasayfa" id="gotopbtnclickevent" class="gotopbtn"> <i class="fas fa-arrow-up"></i> </a>
+    <div class="loader-wrapper">
+        <span class="loader"><span class="loader-inner"></span></span>
+    </div>
+    <!-- javascript cdn-->
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="~/web/scripts/main.js"></script>
+    <script type="text/javascript" src="~/web/scripts/mainpreload.js"></script>
+</body>
+</html>
+

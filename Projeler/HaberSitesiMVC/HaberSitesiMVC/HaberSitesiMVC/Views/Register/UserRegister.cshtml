@@ -1,0 +1,87 @@
+﻿
+@{
+    Layout = null;
+}
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Tankut Özbeyendir, Mert Orak">
+    <meta name="keywords" content="habersitesi, blog, news, haberler, siyaset, bilim, yazılım">
+    <meta name="description" content="Haber sitesi">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <link rel="icon" href="img/fav.png" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="~/web/scripts/logreg.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <title>Haber Portal Sitesi | BANDIRMA MYÖ</title>
+</head>
+<body>
+    <img class="wave" src="~/web/img/wave.jpg">
+    <div class="container">
+        <div class="logo">
+
+            <h1>HABER<br><span>PORTAL</span></h1>
+        </div>
+        <div class="login-content">
+            <form method="post">
+                <img src="~/web/img/avatar.svg">
+                <h2 class="title">Hoşgeldiniz</h2>
+                <h2 class="title">KULLANICI GİRİŞİ</h2>
+                @using (Html.BeginForm("UserRegister", "Register", FormMethod.Post))
+                {
+                    <div class="input-div one">
+                        <div class="i">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="div">
+                            <h5>Kullanıcı adı</h5>
+                            <input type="text" name="username" class="input">
+                        </div>
+                    </div>
+                    <div class="input-div pass">
+                        <div class="i">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="div">
+                            <h5>Email</h5>
+                            <input type="email" name="email" class="input">
+                        </div>
+                    </div>
+                    <div class="input-div pass">
+                        <div class="i">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                        <div class="div">
+                            <h5>Şifre</h5>
+                            <input type="password" name="password" class="input">
+                        </div>
+                    </div>
+                    <input type="submit" class="btn" value="KAYIT OL">
+                    <p style="color:white">@ViewBag.Mesaj</p>
+                    <a href="/Home/Index">Anasayfaya Dön</a>
+                }
+
+            </form>
+        </div>
+    </div>
+    <div class="loader-wrapper">
+        <span class="loader"><span class="loader-inner"></span></span>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="~/web/scripts/logreg.js"></script>
+
+    <script type="text/javascript" src="~/web/scripts/preloadhaber.js"></script>
+</body>
+</html>

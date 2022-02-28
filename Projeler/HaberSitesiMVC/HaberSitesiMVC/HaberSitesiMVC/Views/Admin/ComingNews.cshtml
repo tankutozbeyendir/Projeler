@@ -1,0 +1,32 @@
+﻿@using HaberSitesiMVC.Models.Classes
+@model List<EklenecekHaberler>
+@{
+    ViewBag.Title = "ComingNews";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Haber Listesi</h2>
+
+<br />
+<br />
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>BAŞLIK</th>
+        <th>EDİTÖR</th>
+        <th>GÜNCELLE</th>
+    </tr>
+
+       @foreach (var x in Model)
+        {
+            <tr>
+                <td>@x.ID</td>
+                <td>@x.baslik</td>
+                <td>@x.editor</td>
+                <td><a href="/Admin/ComingNewsGetir/@x.ID" class="btn btn-warning">GÜNCELLE</a></td>
+            </tr>
+        
+    }
+    
+
+</table>

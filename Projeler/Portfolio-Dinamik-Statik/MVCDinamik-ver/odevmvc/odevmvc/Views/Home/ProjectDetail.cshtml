@@ -1,0 +1,80 @@
+﻿@using odevmvc.Models.Classes
+@model List<project>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="~/cssjs/projedetay.css">
+    <!--jQuery-->
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <!--Font awesome-->
+    <script src="https://kit.fontawesome.com/a981a7918e.js" crossorigin="anonymous"></script>
+    <title>Web tasarım ödevi</title>
+</head>
+<body>
+    <section id="projedetay">
+        <nav id="navBar">
+            <ul>
+                <li><a href="/Home/Index/#anasayfa">ANASAYFA</a></li>
+                <li><a href="/Home/Index#hakkimizda">HAKKIMDA</a></li>
+                <li><h1>Tankut Özbeyendir</h1></li>
+                <li><a href="/Home/Index/#projeler">PROEJELER</a></li>
+                <li><a href="/Contact/Index/">ILETISIM</a></li>
+            </ul>
+        </nav>
+        <div class="projedetay-icerik">
+            <div class="paylas">
+
+                <div class="paylas-eleman">
+                    <h4>Paylaş</h4>
+                </div>
+                <div class="paylas-eleman">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+                <div class="paylas-eleman">
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+                <div class="paylas-eleman">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                </div>
+            </div>
+            @foreach (var x in Model)
+            {
+                <div class="detay">
+                    <div class="resim">
+                        <img src="@x.Image" alt="image" />
+                    </div><br /><br />
+
+                    <div class="baslik">
+                        <h1>@x.Title</h1>
+                    </div>
+                    <div class="tarih-yazar">
+                        <p class="tarih-yazar">@x.Date.ToString(string.Format("dd/MM/yyyy"))   |   @x.Author</p>
+                    </div>
+                    <div class="aciklama">
+                        <p>@x.Description</p>
+                    </div>
+                </div>
+            }
+        </div>
+
+        <a href="#" class="yukaricik"><i class="fas fa-arrow-up"></i></a>
+    </section>
+    
+
+
+    <script src="~/cssjs/app.js"></script>
+</body>
+</html>

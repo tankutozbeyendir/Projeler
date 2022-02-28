@@ -1,0 +1,100 @@
+﻿@using HaberSitesiMVC.Models.Classes
+@model HaberSitesiMVC.Models.Classes.HaberYorum
+@{
+    ViewBag.Title = "Home Page";
+}
+
+
+
+<section class="banner">
+    <div class="banner-main-content">
+        <h2>Dünyada olan olaylardan habersiz kalmayın!</h2>
+        <h3>HABER PORTAL</h3>
+
+        <button>
+            <a href="/Home/About/">DAHA FAZLA</a>
+        </button>
+        <h3>EKLENECEK HABERLER</h3>
+        <div class="current-news-head">
+            @foreach(var x in Model.Deger4)
+            {
+                <h3>@x.baslik<span>EDİTÖR : @x.editor</span></h3>
+            }
+            
+        </div>
+    </div>
+
+    <div class="banner-sub-content">
+        @foreach (var x in Model.Deger1)
+        {
+            <div class="hot-topic">
+                <figure><a href="/Haber/HaberDetay/@x.ID"><img src="@x.haberimage" alt="" class="imghover" /></a></figure>
+
+                <div class="hot-topic-content">
+                    <h2>@x.baslik</h2>
+                    <p style="font-family:'Montserrat'">Editör : @x.editor</p>
+                    <p>@x.aciklama.Substring(0,100)...</p>
+                    <a href="/Haber/HaberDetay/@x.ID">Habere git</a>
+                </div>
+            </div>
+        }
+
+
+        @*      <div class="hot-topic">
+            <figure><a href="hotnews/coronavirus.aspx"><img src="~/web/img/hottpc2.jpg" alt="" class="imghover" /></a></figure>
+
+            <div class="hot-topic-content">
+                <h2>Dünya'nın güncel koronavirüs haberleri ve sayıları</h2>
+
+                <h3>Koronavirüs ile mücadele</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore consequatur nostrum minus iusto fugit unde.</p>
+                <a href="hotnews/coronavirus.aspx">Habere git</a>
+            </div>
+        </div>
+
+        <div class="hot-topic">
+            <figure><a href="hotnews/windows.aspx"><img src="~/web/img/hottpc3.jpg" alt="" class="imghover" /></a></figure>
+
+            <div class="hot-topic-content">
+                <h2>Windows, ingilterede 6000 email sunucusunun güvende olmadığını söyledi</h2>
+
+                <h3>Siber güvenlik</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore consequatur nostrum minus iusto fugit unde.</p>
+                <a href="hotnews/windows.aspx">Habere git</a>
+            </div>
+        </div>
+
+        <div class="hot-topic">
+            <figure><a href="hotnews/youtubevaccine.aspx"><img src="~/web/img/hottpc4.jpg" alt="" class="imghover" /></a></figure>
+
+            <div class="hot-topic-content">
+                <h2>Youtube, koronavirüs aşılarıyla ilgili 60 bin video sildi</h2>
+
+                <h3>Youtube videoları neden siliyor?</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore consequatur nostrum minus iusto fugit unde.</p>
+                <a href="hotnews/youtubevaccine.aspx">Habere git</a>
+            </div>
+        </div>*@
+    </div>
+</section>
+
+<hr>
+
+<main>
+    
+    <section class="main-container-left" id="haberler">
+        <h2>Haberler</h2>
+        @Html.Action("SolAlt", "Home")
+
+    </section>
+   
+
+    <section class="main-container-right" id="sondakika">
+        <h2>Son dakika</h2>
+
+        @Html.Action("SonDakika", "Home")
+
+        
+    </section>
+</main>
+

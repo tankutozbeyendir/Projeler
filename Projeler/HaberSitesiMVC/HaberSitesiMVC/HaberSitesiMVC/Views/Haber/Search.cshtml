@@ -1,0 +1,15 @@
+﻿@using (Html.BeginForm("IndexSearch", "Haber", FormMethod.Get))
+{
+    <div class="login">
+        <form runat="server" class="search-data" method="post" action="#" style="border-style: none;  padding-left:10px; margin-top:1px;">
+            @* <input type="text" required="" placeholder="ne aramak istemiştiniz?" maxlength="50" class="aramainput" style="height: 40px; width: 250px; padding: 0 10px; color: #fff; font-weight: 500; background: none; border: none; font-family: 'Quicksand'; background: #252525; min-width: 200px !important; border: 1px solid rgba(155,155,155,0.2);float: left;outline:none;" />
+
+            *@
+            @Html.TextBox("search", null, new {  @required = "required", @class = "aramainput", @style = "height: 40px; width: 740px; padding: 0 10px; color: #fff; font-weight: 500; background: none; border: none; font-family: 'Quicksand'; background: #252525; min-width: 200px !important; border: 1px solid rgba(155,155,155,0.2);float: left;margin-left:500px;margin-top:10px;outline:none;" })
+            <button type="submit" style=" margin-top: 10px; float:left;" class="searchButton">ARA</button>
+
+        </form>
+    </div>
+}
+
+

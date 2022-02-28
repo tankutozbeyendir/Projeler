@@ -1,0 +1,23 @@
+﻿@model odevmvc.Models.Classes.admin
+@{
+    ViewBag.Title = "getAccount";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<h2 class="title-page">Hesap güncelle</h2>
+
+<br />
+@using (Html.BeginForm("editAccount", "Admin", FormMethod.Post))
+{
+    <label>ID</label>
+    @Html.TextBoxFor(x => x.ID, new { @class = "form-control", @readonly = "readonly" })
+    <br />
+    <label>KULLANICI ADI</label>
+    @Html.TextBoxFor(x => x.User, new { @class = "form-control" })
+    <br />
+    <label>ŞİFRE</label>
+    @Html.TextBoxFor(x => x.Password, new { @class = "form-control" })
+    <br />
+    
+    <button class="btn btn-success">HESAP GÜNCELLE</button>
+}

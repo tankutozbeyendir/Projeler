@@ -1,0 +1,198 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.circle {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(11, 76, 114);
+    background: -webkit-linear-gradient(to right, #03095cb0, #68686886, #03095cb0);
+    background: linear-gradient(to right, #03095cb0, #68686886, rgb(11, 76, 114));
+    clip-path: circle(600px at right 800px);
+}
+html {
+    font-family: 'Work Sans', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #f4f4f4;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 60px 100px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to bottom, rgba(0,0,0.8), rgba(0,0,0,.5)), url("../a.jpg") center no-repeat;
+    background-size: cover;
+}
+
+header .logo {
+    position: relative;
+    max-width: 300px;
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 24px;
+}
+header .logo span {
+    font-size: 14px;
+    font-weight: 700;
+    margin-left: 130px;
+    letter-spacing: 6px;
+    color: #0c4a74;
+}
+header ul {
+    display: flex;
+    position: relative;
+}
+header ul li {
+    list-style: none;
+}
+
+header ul li a {
+    display: inline-block;
+    color: #f4f4f4;
+    font-weight: 400;
+    margin-left: 40px;
+    padding: 15px;
+    text-decoration: none;
+}
+/*rezervasyon*/
+.reservation {
+    background-color: rgb(11, 76, 114);
+    padding: 15px;
+    transition: .4s ease-out;
+}
+.reservation:hover {
+    
+    background-color: #263d9c;
+}
+.reservation i {
+    background-color: rgb(80, 80, 80);
+    border-radius: 20px;
+    height: 25px;
+    width: 25px;
+    padding: 3px;
+    color: #c7c5c5;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+/*rezervasyon*/
+header ul li a i {
+    color: #f4f4f4;
+}
+
+/* content */
+
+.content {
+    width: 100%;
+    position: relative;
+    display: flex;
+    padding: 60px 240px;
+    margin-top: 150px;
+}
+.content .text {
+    position: relative;
+    max-width: 1000px;
+}
+.content .text h1 {
+    font-size: 42px;
+    color: #f4f4f4;
+    font-weight: 900;
+    font-family: sans-serif;
+}
+.content .text p {
+    color: #f4f4f4;
+    font-family: 'Raleway', sans-serif;
+    margin-left: 10px;
+}
+
+
+
+.footer {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 190px;
+    margin-right: 20px;
+}
+.footer p {
+    position: relative;
+    font-family: 'Kumbh Sans', sans-serif;
+    color: #f4f4f4;
+    font-size: 15px;
+    text-shadow: 1px 1px solid;
+}
+
+.contact {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 50px;
+    justify-content: center;
+    margin-top: 60px;
+    background-color: #eeeeee;
+    width: 1400px;
+    margin-left: 220px;
+    height: 240px;
+    border-radius: 10px;
+}
+.contact input {
+    width: 355px;
+    height: 55px;
+    margin-left: 40px;
+    border: 1px solid #A4A4A4;
+    padding: 8px;
+    outline: none;
+    font-family: sans-serif;
+    font-size: 17px;
+    line-height: 2;
+    color: #000;
+}
+.contact textarea {
+    margin-left: 40px;
+    width: 400px;
+    height: 160px;
+    border: 1px solid #A4A4A4;
+    padding: 8px;
+    outline: none;
+    font-family: sans-serif;
+    font-size: 17px;
+    line-height: 2;
+    color: #000;
+}
+
+.contactButton {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.contactButton a {
+    width: 200px;
+    background-color: rgb(11, 76, 114);
+    margin-top: 20px;
+    padding: 15px;
+    transition: .4s ease;
+}
+.contactButton a:hover {
+    background-color: #263d9c;
+    transform: translateY(10px);
+}
+

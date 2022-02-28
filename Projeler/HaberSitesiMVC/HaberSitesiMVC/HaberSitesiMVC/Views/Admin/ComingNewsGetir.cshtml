@@ -1,0 +1,22 @@
+﻿@model HaberSitesiMVC.Models.Classes.EklenecekHaberler
+@{
+    ViewBag.Title = "ComingNewsGetir";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Eklenecek Haber Güncelle</h2>
+<br />
+
+@using (Html.BeginForm("ComingNewsGuncelle", "Admin", FormMethod.Post))
+{
+    <label>ID</label>
+    @Html.TextBoxFor(x => x.ID, new { @class = "form-control", @readonly = "readonly" })
+    <br />
+    <label>BAŞLIK</label>
+    @Html.TextBoxFor(x => x.baslik, new { @class = "form-control" })
+    <br />
+    <label>EDİTÖR</label>
+    @Html.TextAreaFor(x => x.editor, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-success">EKLENECEK HABERLER GÜNCELLE</button>
+}

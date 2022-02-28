@@ -1,0 +1,29 @@
+﻿@using HaberSitesiMVC.Models.Classes
+@model List<User>
+@{
+    ViewBag.Title = "Kullanici";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Kullanici Listesi</h2>
+
+<br />
+<br />
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>KULLANICI ADI</th>
+        <th>ŞİFRE</th>
+        <th>SİL</th>
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.ID</td>
+            <td>@x.username</td>
+            <td>@x.password</td>
+            <td><a href="/Admin/KullaniciSil/@x.ID" class="btn btn-danger">SİL</a></td>
+        </tr>
+    }
+
+</table>

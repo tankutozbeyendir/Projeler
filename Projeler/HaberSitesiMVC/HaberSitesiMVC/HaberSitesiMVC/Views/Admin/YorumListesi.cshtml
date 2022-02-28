@@ -1,0 +1,45 @@
+﻿@using HaberSitesiMVC.Models.Classes
+@model List<Yorum> 
+@{
+    ViewBag.Title = "YorumListesi";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<h2>Yorum Listesi</h2>
+
+<br />
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>KULLANICI ADI</th>
+        <th>MAİL</th>
+        <th>YORUM</th>
+        <th>HABER</th>
+        <th>SİL</th>
+        <th>GÜNCELLE</th>
+        <th>DETAYLAR</th>
+        <th>ONAYLA</th>
+    </tr>
+    @foreach (var x in Model)
+    {
+<tr>
+    <td>@x.ID</td>
+    <td>@x.kullanici</td>
+    <td>@x.mail</td>
+    <td>@x.yorumlar</td>
+    <td>@x.haber.baslik</td>
+    <td><a href="/Admin/YorumSil/@x.ID" class="btn btn-danger">SİL</a></td>
+    <td><a href="/Admin/YorumGetir/@x.ID" class="btn btn-warning">GÜNCELLE</a></td>
+    <td><a href="/Haber/HaberDetay/@x.ID" class="btn btn-default">DETAYLAR</a></td>
+    @if (x.IsApproved)
+    {
+    <td>ONAYLANDI</td>
+    }
+    else
+    {
+        <td><a href="/Admin/YorumOnayla/@x.ID" class="btn btn-success">ONAYLA</a></td>
+    }
+
+</tr>
+    }
+
+</table>
