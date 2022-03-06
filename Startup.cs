@@ -32,7 +32,11 @@ namespace Bosphorus
             services.AddScoped<ITeamRepository, TeamRepository>();
             services.AddScoped<IContactRepository, ContactRepository>();
             services.AddScoped<IAboutRepository, AboutRepository>();
+            services.AddMvc().AddSessionStateTempDataProvider();
 
+            services.AddSession();
+
+            services.AddHttpContextAccessor();
             services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
                 .AddCookie(x =>
                 {
@@ -62,6 +66,13 @@ namespace Bosphorus
             app.UseRouting();
 
             app.UseAuthorization();
+            app.UseSession();
+
+            app.UseHttpsRedirection();
+
+            app.UseStaticFiles();
+
+            app.UseCookiePolicy();
 
             app.UseEndpoints(endpoints =>
             {

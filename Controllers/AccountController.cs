@@ -2,6 +2,7 @@
 using Bosphorus.Entity;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -29,9 +30,11 @@ namespace Bosphorus.Controllers
                 {
                     new Claim(ClaimTypes.Name, t.TeamFullName)
                 };
+                HttpContext.Session.SetString("userName", t.TeamFullName);
                 var identity = new ClaimsIdentity(claims, "Login");
                 ClaimsPrincipal pr = new ClaimsPrincipal(identity);
                 await HttpContext.SignInAsync(pr);
+                
                 return RedirectToAction("Index", "Account");
             }
             return View();

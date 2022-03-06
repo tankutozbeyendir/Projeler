@@ -158,3 +158,4 @@ C:\Users\carli\source\repos\Bosphorus\bin\Debug\net5.0\Microsoft.Extensions.Iden
 C:\Users\carli\source\repos\Bosphorus\bin\Debug\net5.0\Microsoft.Extensions.Identity.Stores.dll
 C:\Users\carli\source\repos\Bosphorus\obj\Debug\net5.0\Bosphorus.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\carli\source\repos\Bosphorus\obj\Debug\net5.0\staticwebassets\Bosphorus.StaticWebAssets.xml
+C:\Users\carli\source\repos\Bosphorus\obj\Debug\net5.0\Razor\Views\Shared\_AdminLayout.cshtml.g.cs
