@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Bosporus Elite</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <!--comment line git test-->
+  <!--comment line git test-->
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a981a7918e.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Gp - v4.7.0
+  * Template URL: https://bootstrapmade.com/gp-free-multipurpose-html-bootstrap-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top ">
+    <div class="container">
+      <h1 class="logo"><a href="index.html">Bosphorus <span>Elite</span></a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo me-auto me-lg-0"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scroll active" href="#hero">Home</a></li>
+          <li><a class="nav-link scroll" href="#team">Team</a></li>
+          <li><a class="nav-link scroll" href="#about">About</a></li>
+          <li><a class="nav-link scroll" href="#services">Services</a></li>
+          <li><a class="nav-link scroll" href="#contact">Contact</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav>
+
+      <a href="#contact" class="get-started-btn scrollto">Work With Us</a>
+
+    </div>
+  </header>
+ 
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-info">
+              <h3>Bosphorus<span> Elite</span></h3>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Links</h4>
+            <ul>
+              <li><a href="#hero">Home</a></li>
+              <li><a href="#about">About us</a></li>
+              <li><a href="#team">Team</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li><a href="#services">Health Services</a></li>
+              <li><a href="#services">Holiday</a></li>
+              <li><a href="#services">Investments</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-4 col-md-6 footer-newsletter" id="footer-contact">
+            <h4>Contact</h4>
+            <p>
+              Romania / Tulcea<br><br>
+              <strong>Phone:</strong> {{phone}}<br>
+              <strong>Email:</strong> {{email}}<br>
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="copyright">
+        <strong>Bosphorus <span style="color: #ffc451;">Elite</span></strong>.
+      </div> 
+    </div>
+  </footer>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    new Vue({
+      el : "#our-team",
+      data : {
+        co : "Co-Founder",
+        founders : {
+          f1 : "Eren Özbeyendir",
+          f2 : "Nicolae Stan",
+          f3 : "Gökhan Şen",
+          f4 : "Mahmut Arabulan"
+        }
+      }
+
+    })
+    new Vue({
+      el : "#about",
+      data : {
+        aboutusone : "We are a multi-section company founded in 2021 by four founders in Romania.",
+        aboutustwo : "We are at your service with successful employees in their fields and managers with strong leadership skills. Our aim is to provide the best service to our customers and to achieve.",
+      }
+    })
+    new Vue({
+      el : "#footer-contact",
+      data : {
+        email : "hi@bosphoruselite.eu",
+        phone : "+4 4444 4444"
+      }
+    })
+
+    const contact = new Vue({
+      el : "#vue-form",
+      data : {
+        errors:[],
+        name : null,
+        email : null,
+        subject : null,
+        message : null
+      },
+      methods: {
+        checkForm : function(e){
+          if(this.name && this.email){
+            return true;
+          }
+          this.errors = [];
+          if(!this.name){
+            this.errors.push("Name required.");
+          }
+          if(!this.email){
+            this.errors.push("Email required.");
+          }
+          if(!this.subject){
+            this.errors.push("Subject required.");
+          }
+          if(!this.message){
+            this.errors.push("Message required.");
+          }
+          
+          e.preventDefault();
+        }
+      }
+    })
+  </script>
+</body>
+
+</html>

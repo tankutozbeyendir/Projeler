@@ -1,0 +1,86 @@
+﻿@{
+    Layout = "_Layout";
+}
+
+<section id="hero">
+    <div class="container" data-aos="fade-down">
+        <div class="container-in" data-aos="fade-down" data-aos-delay="350">
+            <div class="container-in-text">
+                <h1>We are a company where many talented people</h1>
+                <h2> <span>come together</span>.</h2>
+            </div>
+        </div>
+    </div>
+</section>
+@await Component.InvokeAsync("TeamComponent")
+
+<main id="main">
+
+    @await Component.InvokeAsync("AboutComponent")
+
+    <!--
+        <section id="clients" class="clients">
+          <div class="container" data-aos="zoom-out" data-aos-delay="100">
+              <div class="clients-slider swiper">
+                  <div class="swiper-wrapper align-items-center">
+                      <div class="swiper-slide"><img src="" class="img-fluid" alt=""></div>
+                      <div class="swiper-slide"><img src="" class="img-fluid" alt=""></div>
+                      <div class="swiper-slide"><img src="" class="img-fluid" alt=""></div>
+                      <div class="swiper-slide"><img src="" class="img-fluid" alt=""></div>
+                      <div class="swiper-slide"><img src="" class="img-fluid" alt=""></div>
+                      <div class="swiper-slide"><img src="" class="img-fluid" alt=""></div>
+                      <div class="swiper-slide"><img src="" class="img-fluid" alt=""></div>
+                      <div class="swiper-slide"><img src="" class="img-fluid" alt=""></div>
+                  </div>
+              </div>
+
+          </div>
+      </section>
+    -->
+    @await Component.InvokeAsync("ServiceComponent")
+
+    <section id="contact" class="contact">
+        <div class="section-title">
+            <p>Contact</p>
+        </div>
+        <div class="container" data-aos="fade-down" data-aos-delay="100">
+            <div class="row">
+                <div class="row">
+                    <form method="post" class="full-form" id="vue-form" submit="checkForm" enctype="multipart/form-data">
+                        @using (Html.BeginForm("Index", "Home", FormMethod.Post))
+                        {
+                            <div class="row">
+                                <div class="mt-3">
+                                    <input type="text" name="FullName" v-model="name" class="form-control" id="name" placeholder="Full Name">
+                                </div>
+                                <div class="mt-3">
+                                    <input type="email" class="form-control" name="Email" v-model="email" id="email" placeholder="Email">
+                                </div>
+                            </div>
+                            <div class="mt-3">
+                                <input type="text" class="form-control" name="Subject" v-model="subject" id="subject" placeholder="Subject">
+                            </div>
+                            <div class="mt-3">
+                                <textarea class="form-control" name="Message" v-model="message" id="message" rows="5" placeholder="Message"></textarea>
+                            </div>
+                            <div class="text-center mt-3"><button type="submit">Send</button></div>
+                            <br>
+                        }
+
+                        <div class="contact-error">
+                            <p>
+                                <b>@ViewBag.Title</b>
+                                <ul>
+                                    <li v-for="error in errors" style="list-style:none">@ViewBag.Message</li>
+                                </ul>
+                            </p>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+</main>

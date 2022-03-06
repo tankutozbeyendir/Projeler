@@ -1,0 +1,23 @@
+﻿@model List<Services>
+<section id="services" class="services">
+    <div class="section-title">
+        <p>our Services</p>
+    </div>
+    <div class="container" data-aos="fade-up">
+        <div class="services-container">
+            @foreach (var x in Model)
+            {
+                <div class="services-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="services-box">
+                        <div class="services-icon"><i class="fas fa-water"></i></div>
+                        <h4>@x.ServiceTitle.</h4>
+                        <p>@x.ServiceDescription</p>
+                    </div>
+                </div>
+            }
+
+
+
+        </div>
+    </div>
+</section>

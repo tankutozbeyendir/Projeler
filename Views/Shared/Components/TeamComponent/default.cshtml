@@ -1,0 +1,30 @@
+﻿@model List<Team>
+<section id="team" class="team">
+    <div class="section-title">
+        <p>Our Managers</p>
+    </div>
+    <div class="container" data-aos="fade-right">
+        <div class="our-team" id="our-team">
+
+            @foreach(var x in Model)
+            {
+            <div class="team-item">
+                <div class="member" data-aos="fade-right" data-aos-delay="100">
+                    <div class="member-img">
+                        <img src="@x.TeamImage" class="img-fluid" alt="">
+                    </div>
+                    <div class="member-info">
+                        <h4>@x.TeamFullName</h4>
+                        <span>@x.TeamDepartmant</span>
+                    </div>
+                </div>
+            </div>
+            }
+            
+
+            
+
+        </div>
+
+    </div>
+</section>

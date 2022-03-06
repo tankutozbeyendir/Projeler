@@ -1,0 +1,208 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\BosphorusElite\.git\COMMIT_EDITMSG" />
+    <None Include="wwwroot\BosphorusElite\.git\config" />
+    <None Include="wwwroot\BosphorusElite\.git\description" />
+    <None Include="wwwroot\BosphorusElite\.git\HEAD" />
+    <None Include="wwwroot\BosphorusElite\.git\hooks\applypatch-msg.sample" />
+    <None Include="wwwroot\BosphorusElite\.git\hooks\commit-msg.sample" />
+    <None Include="wwwroot\BosphorusElite\.git\hooks\fsmonitor-watchman.sample" />
+    <None Include="wwwroot\BosphorusElite\.git\hooks\post-update.sample" />
+    <None Include="wwwroot\BosphorusElite\.git\hooks\pre-applypatch.sample" />
+    <None Include="wwwroot\BosphorusElite\.git\hooks\pre-commit.sample" />
+    <None Include="wwwroot\BosphorusElite\.git\hooks\pre-merge-commit.sample" />
+    <None Include="wwwroot\BosphorusElite\.git\hooks\pre-push.sample" />
+    <None Include="wwwroot\BosphorusElite\.git\hooks\pre-rebase.sample" />
+    <None Include="wwwroot\BosphorusElite\.git\hooks\pre-receive.sample" />
+    <None Include="wwwroot\BosphorusElite\.git\hooks\prepare-commit-msg.sample" />
+    <None Include="wwwroot\BosphorusElite\.git\hooks\push-to-checkout.sample" />
+    <None Include="wwwroot\BosphorusElite\.git\hooks\update.sample" />
+    <None Include="wwwroot\BosphorusElite\.git\index" />
+    <None Include="wwwroot\BosphorusElite\.git\info\exclude" />
+    <None Include="wwwroot\BosphorusElite\.git\logs\HEAD" />
+    <None Include="wwwroot\BosphorusElite\.git\logs\refs\heads\master" />
+    <None Include="wwwroot\BosphorusElite\.git\objects\01\ce0f5e36a53a4f4e3a162e235a2d9fbc3db4db" />
+    <None Include="wwwroot\BosphorusElite\.git\objects\02\3791e1e30c2e62a2ba67116ac58dffbc29e2f6" />
+    <None Include="wwwroot\BosphorusElite\.git\objects\05\26eef67d4fc99cf7464b13163744007d6dc6ea" />
+    <None Include="wwwroot\BosphorusElite\.git\objects\08\ef37639e01a005dcc8947ab2bdecdf670a1a61" />
+    <None Include="wwwroot\BosphorusElite\.git\objects\12\07a1713c5e0789d0facbc7307c3251d83e60d4" />
+    <None Include="wwwroot\BosphorusElite\.git\objects\12\5f8f13aa5c37acbb7ee7f24b5283b384804fd0" />
+    <None Include="wwwroot\BosphorusElite\.git\objects\14\72dec059b31e556f29fba41de840dc4add9c4f" />
+    <None Include="wwwroot\BosphorusElite\.git\objects\16\649a6a2d5239159f4b78a44f2fd76931927731" />
+    <None Include="wwwroot\BosphorusElite\.git\objects\18\ed80743357cd419342f0a51c5bf68c2c109535" />
+    <None Include="wwwroot\BosphorusElite\.git\objects\1e\0621c84fb0355798a783354cf4e9b651eb9b30" />
+    <None Include="wwwroot\BosphorusElite\.git\objects\1f\eb9a5cdfd19d69aa34ed553bb2cd855f45da02" />
+    <None Include="wwwroot\BosphorusElite\.git\objects\22\8f23bc5cdfde7a6726cd0e4f858048e76a14d6" />
+    <None Include="wwwroot\BosphorusElite\.git\objects\26\962e42315b13b3f039dbb32e9d4940e8195471" />
+    <None Include="wwwroot\BosphorusElite\.git\objects\2f\c475f8dada2243832ef0f05d5ade61b27f8e75" />
+    <None Include="wwwroot\BosphorusElite\.git\objects\36\e68815806e96202d8a882272339b1d109c0cdf" />
+    <None Include="wwwroot\BosphorusElite\.git\objects\38\beb810f024c92eb065f4286c4ff80be2ddbcc5" />
+    <None Include="wwwroot\BosphorusElite\.git\objects\39\c26aaa2c111b7d20aed7e01f41c2c8eb757fbe" />
+    <None Include="wwwroot\BosphorusElite\.git\objects\3a\75230fcbbb929f0566b49b584292519f181103" />
+    <None Include="wwwroot\BosphorusElite\.git\objects\3c\6130f99c114179b0335de5348213c945a60c7c" />
+    <None Include="wwwroot\BosphorusElite\.git\objects\3d\a8cba2a928d30d5ae0b99829e1125dd7cdcfbc" />
+    <None Include="wwwroot\BosphorusElite\.git\objects\41\7e3cbec36111d5148fb3153102896c4506c7b8" />
+    <None Include="wwwroot\BosphorusElite\.git\objects\43\37c0b7632826ac50fa2c4118da1d72924a6ba1" />
+    <None Include="wwwroot\BosphorusElite\.git\objects\47\8c3b4449f777ebbcb7b262f1d85c7e85d31001" />
+    <None Include="wwwroot\BosphorusElite\.git\objects\48\2520f958e8acaa8565f5faf628eabd59e89f0a" />
+    <None Include="wwwroot\BosphorusElite\.git\objects\49\b739de86f520f2ec3cc92c25e50ac7a476f2aa" />
+    <None Include="wwwroot\BosphorusElite\.git\objects\4b\825dc642cb6eb9a060e54bf8d69288fbee4904" />
+    <None Include="wwwroot\BosphorusElite\.git\objects\55\954191387b39391e20456c9c955e548e2a0c76" />
+    <None Include="wwwroot\BosphorusElite\.git\objects\56\4a4dced5df286c7a2b847a3338f9b37b73a748" />
+    <None Include="wwwroot\BosphorusElite\.git\objects\56\d6a8973bb46d2a9186c7d5a2efda206846a2e4" />
+    <None Include="wwwroot\BosphorusElite\.git\objects\57\912ef6babeb80719eaf5fe0fdb9a5d689f5525" />
+    <None Include="wwwroot\BosphorusElite\.git\objects\61\8b0e13a6c6456237ca83495c040a87e9bb339e" />
+    <None Include="wwwroot\BosphorusElite\.git\objects\65\5f90a25ef2764fa3f29ee1f799da60e4853746" />
+    <None Include="wwwroot\BosphorusElite\.git\objects\66\923fe6a1ee9b53b7136997ac07748c1874b033" />
+    <None Include="wwwroot\BosphorusElite\.git\objects\6b\b08bbbf2ae3a10dc74c2a38a3c91ad5a0844ff" />
+    <None Include="wwwroot\BosphorusElite\.git\objects\6b\cd85c81352bb771657a4b1e6126371a08a0609" />
+    <None Include="wwwroot\BosphorusElite\.git\objects\6d\f62d300f4f1bb7378a425ed8dafc38b65ea729" />
+    <None Include="wwwroot\BosphorusElite\.git\objects\71\177efc6ae33cf961b2fcf2119532f0d7276a6a" />
+    <None Include="wwwroot\BosphorusElite\.git\objects\71\27436c66e8b47840c592160ea42a3b6228e4cc" />
+    <None Include="wwwroot\BosphorusElite\.git\objects\72\c7cfb43ce9387d576a4e86ec59e43537b5c30f" />
+    <None Include="wwwroot\BosphorusElite\.git\objects\76\e3563c1f7d7c8f5a8c469c67105dd601fd3069" />
+    <None Include="wwwroot\BosphorusElite\.git\objects\78\e917e0494b9b920bb8a688586a02300c2eea8e" />
+    <None Include="wwwroot\BosphorusElite\.git\objects\7c\b9191f7d7f6faec53cbed2b61e5827d763b5a1" />
+    <None Include="wwwroot\BosphorusElite\.git\objects\7c\d3bc250ebd5f7d8992889858a7cfb6d161d258" />
+    <None Include="wwwroot\BosphorusElite\.git\objects\7d\78e32a669415c9d55382bd64063bedfe743f17" />
+    <None Include="wwwroot\BosphorusElite\.git\objects\7e\fc0ee6d992a621f864975dbb66b8185144c416" />
+    <None Include="wwwroot\BosphorusElite\.git\objects\81\2621e641ea15893a0b222517b640ceaa8dacff" />
+    <None Include="wwwroot\BosphorusElite\.git\objects\83\5a3d6bcb23f7038cf12479a1ba736a4f7891ab" />
+    <None Include="wwwroot\BosphorusElite\.git\objects\86\dc4bface73c4c3fc07d3ea2741e2ce05ad82a3" />
+    <None Include="wwwroot\BosphorusElite\.git\objects\87\7ff63db35102f06b1eaff143700b5f59421471" />
+    <None Include="wwwroot\BosphorusElite\.git\objects\8e\1b1026e775ed184644fa9d7fcdcdbdce3d18e5" />
+    <None Include="wwwroot\BosphorusElite\.git\objects\8e\c49c744672d5ddf6529922d509db28b6ad3f4c" />
+    <None Include="wwwroot\BosphorusElite\.git\objects\8e\c4e02c663946b51a6583a9970c6b980b4cc6d3" />
+    <None Include="wwwroot\BosphorusElite\.git\objects\8f\c583d56953a8d9f992f687d7612af638ac367e" />
+    <None Include="wwwroot\BosphorusElite\.git\objects\99\466447c637e6e051ee9c523f27dc92cff27e63" />
+    <None Include="wwwroot\BosphorusElite\.git\objects\a1\8da6ae01bad82437558f9e0e7b02e4d2372611" />
+    <None Include="wwwroot\BosphorusElite\.git\objects\a3\4696a935aad135782d0d9cc8fa0f3dd35e3df6" />
+    <None Include="wwwroot\BosphorusElite\.git\objects\a3\aab0e5eef0bd7634e9421685ff8dca9b71638b" />
+    <None Include="wwwroot\BosphorusElite\.git\objects\ac\0b641b90aa3ab737e858c5f19e936365100076" />
+    <None Include="wwwroot\BosphorusElite\.git\objects\ac\f1d3aa567f22b0bc42775425d6e655e0d4e03d" />
+    <None Include="wwwroot\BosphorusElite\.git\objects\ad\d9409d88fd9535d6593e9043bd81400e9a1894" />
+    <None Include="wwwroot\BosphorusElite\.git\objects\ae\4d5fd33e6362200beb28a496b3a13f6a6e487f" />
+    <None Include="wwwroot\BosphorusElite\.git\objects\b1\6609a2c0e323e48e0f4c726d8c55f03d86aa8b" />
+    <None Include="wwwroot\BosphorusElite\.git\objects\b5\b17d73552a45b2d7e746cf421babcb6bcf9047" />
+    <None Include="wwwroot\BosphorusElite\.git\objects\b7\9ab6fc0484fdc99c45b3c0c94ad20ed9b60644" />
+    <None Include="wwwroot\BosphorusElite\.git\objects\bd\4f7f7db50c83d5e169197807e4d2d8922fa6d0" />
+    <None Include="wwwroot\BosphorusElite\.git\objects\be\373be0928057481fa40d571edfeb9badfb0fc2" />
+    <None Include="wwwroot\BosphorusElite\.git\objects\be\f02e3cab51aaf42b87331f31af8484f87339d8" />
+    <None Include="wwwroot\BosphorusElite\.git\objects\c3\8bd1557774fb862daa826583aabcb9b4c9d0ef" />
+    <None Include="wwwroot\BosphorusElite\.git\objects\c4\4bb809c5adce16e3e75d6266098b7a4fb15804" />
+    <None Include="wwwroot\BosphorusElite\.git\objects\c5\09cf53fb0e2764fce3a838480d58d6262dc477" />
+    <None Include="wwwroot\BosphorusElite\.git\objects\c5\6d642a7e9208b360b8c72f0a72e535ad73e9c9" />
+    <None Include="wwwroot\BosphorusElite\.git\objects\c8\4afa43c6ff447231df79c21ad80a99191446a0" />
+    <None Include="wwwroot\BosphorusElite\.git\objects\cc\0a25561dfb616832227c9e2b2c1b1bbe69bc05" />
+    <None Include="wwwroot\BosphorusElite\.git\objects\d1\55068cd9497bb7d125cc45c9fa369d40630022" />
+    <None Include="wwwroot\BosphorusElite\.git\objects\d1\5b3441ade21366baaea5a741be9b2c9f9a0359" />
+    <None Include="wwwroot\BosphorusElite\.git\objects\d8\85231452a9ff56c7274ef6eba0485e5d9667cc" />
+    <None Include="wwwroot\BosphorusElite\.git\objects\d9\b546b30dd95c2a6ff3ffad0602a0fbc01415f4" />
+    <None Include="wwwroot\BosphorusElite\.git\objects\da\5da3fc09803d6fb8f46bfab367ad64ce78aca4" />
+    <None Include="wwwroot\BosphorusElite\.git\objects\e2\06954281e3badab2db04fe7633bdd638725120" />
+    <None Include="wwwroot\BosphorusElite\.git\objects\e3\24afa33650d896245f18b3cbdc238d0187f6d8" />
+    <None Include="wwwroot\BosphorusElite\.git\objects\e5\85c90cce031aa4c92404993c6b44d38d90fe0e" />
+    <None Include="wwwroot\BosphorusElite\.git\objects\e5\99c720ebb4c18ef2c52cd596375a6596b36bc2" />
+    <None Include="wwwroot\BosphorusElite\.git\objects\e5\d26a25ce0c880cd112f39aa8380177e07248ce" />
+    <None Include="wwwroot\BosphorusElite\.git\objects\e6\fe1f604d2459d416a5c61bbf6a6b3b1479074d" />
+    <None Include="wwwroot\BosphorusElite\.git\objects\ec\c6a76c0848412c850d6fb2602c234400837f79" />
+    <None Include="wwwroot\BosphorusElite\.git\objects\f1\6c5be871a8daec535dbcdcf9db84b6c4d9df7e" />
+    <None Include="wwwroot\BosphorusElite\.git\objects\f1\f9c8fac448d5bb8824c526ad28bed4cccbfe55" />
+    <None Include="wwwroot\BosphorusElite\.git\objects\f7\0d4fdc32fb3d8ee30d99184af16a0203429bd7" />
+    <None Include="wwwroot\BosphorusElite\.git\objects\fb\f1d00062a84061436203eca8b9256fbc081876" />
+    <None Include="wwwroot\BosphorusElite\.git\objects\fb\f4d88d8d7a9d7dba957c24f9dfdf616fd43dc4" />
+    <None Include="wwwroot\BosphorusElite\.git\ORIG_HEAD" />
+    <None Include="wwwroot\BosphorusElite\.git\refs\heads\master" />
+    <None Include="wwwroot\BosphorusElite\assets\css\style.css" />
+    <None Include="wwwroot\BosphorusElite\assets\img\about.jpg" />
+    <None Include="wwwroot\BosphorusElite\assets\img\hero-bg.jpg" />
+    <None Include="wwwroot\BosphorusElite\assets\img\team\person.jpg" />
+    <None Include="wwwroot\BosphorusElite\assets\js\main.js" />
+    <None Include="wwwroot\BosphorusElite\assets\vendor\aos\aos.css" />
+    <None Include="wwwroot\BosphorusElite\assets\vendor\aos\aos.js" />
+    <None Include="wwwroot\BosphorusElite\assets\vendor\bootstrap-icons\bootstrap-icons.css" />
+    <None Include="wwwroot\BosphorusElite\assets\vendor\bootstrap-icons\fonts\bootstrap-icons.woff" />
+    <None Include="wwwroot\BosphorusElite\assets\vendor\bootstrap-icons\fonts\bootstrap-icons.woff2" />
+    <None Include="wwwroot\BosphorusElite\assets\vendor\bootstrap-icons\index.html" />
+    <None Include="wwwroot\BosphorusElite\assets\vendor\bootstrap\css\bootstrap-grid.css" />
+    <None Include="wwwroot\BosphorusElite\assets\vendor\bootstrap\css\bootstrap-grid.css.map" />
+    <None Include="wwwroot\BosphorusElite\assets\vendor\bootstrap\css\bootstrap-grid.min.css" />
+    <None Include="wwwroot\BosphorusElite\assets\vendor\bootstrap\css\bootstrap-grid.min.css.map" />
+    <None Include="wwwroot\BosphorusElite\assets\vendor\bootstrap\css\bootstrap-grid.rtl.css" />
+    <None Include="wwwroot\BosphorusElite\assets\vendor\bootstrap\css\bootstrap-grid.rtl.css.map" />
+    <None Include="wwwroot\BosphorusElite\assets\vendor\bootstrap\css\bootstrap-grid.rtl.min.css" />
+    <None Include="wwwroot\BosphorusElite\assets\vendor\bootstrap\css\bootstrap-grid.rtl.min.css.map" />
+    <None Include="wwwroot\BosphorusElite\assets\vendor\bootstrap\css\bootstrap-reboot.css" />
+    <None Include="wwwroot\BosphorusElite\assets\vendor\bootstrap\css\bootstrap-reboot.css.map" />
+    <None Include="wwwroot\BosphorusElite\assets\vendor\bootstrap\css\bootstrap-reboot.min.css" />
+    <None Include="wwwroot\BosphorusElite\assets\vendor\bootstrap\css\bootstrap-reboot.min.css.map" />
+    <None Include="wwwroot\BosphorusElite\assets\vendor\bootstrap\css\bootstrap-reboot.rtl.css" />
+    <None Include="wwwroot\BosphorusElite\assets\vendor\bootstrap\css\bootstrap-reboot.rtl.css.map" />
+    <None Include="wwwroot\BosphorusElite\assets\vendor\bootstrap\css\bootstrap-reboot.rtl.min.css" />
+    <None Include="wwwroot\BosphorusElite\assets\vendor\bootstrap\css\bootstrap-reboot.rtl.min.css.map" />
+    <None Include="wwwroot\BosphorusElite\assets\vendor\bootstrap\css\bootstrap-utilities.css" />
+    <None Include="wwwroot\BosphorusElite\assets\vendor\bootstrap\css\bootstrap-utilities.css.map" />
+    <None Include="wwwroot\BosphorusElite\assets\vendor\bootstrap\css\bootstrap-utilities.min.css" />
+    <None Include="wwwroot\BosphorusElite\assets\vendor\bootstrap\css\bootstrap-utilities.min.css.map" />
+    <None Include="wwwroot\BosphorusElite\assets\vendor\bootstrap\css\bootstrap-utilities.rtl.css" />
+    <None Include="wwwroot\BosphorusElite\assets\vendor\bootstrap\css\bootstrap-utilities.rtl.css.map" />
+    <None Include="wwwroot\BosphorusElite\assets\vendor\bootstrap\css\bootstrap-utilities.rtl.min.css" />
+    <None Include="wwwroot\BosphorusElite\assets\vendor\bootstrap\css\bootstrap-utilities.rtl.min.css.map" />
+    <None Include="wwwroot\BosphorusElite\assets\vendor\bootstrap\css\bootstrap.css" />
+    <None Include="wwwroot\BosphorusElite\assets\vendor\bootstrap\css\bootstrap.css.map" />
+    <None Include="wwwroot\BosphorusElite\assets\vendor\bootstrap\css\bootstrap.min.css" />
+    <None Include="wwwroot\BosphorusElite\assets\vendor\bootstrap\css\bootstrap.min.css.map" />
+    <None Include="wwwroot\BosphorusElite\assets\vendor\bootstrap\css\bootstrap.rtl.css" />
+    <None Include="wwwroot\BosphorusElite\assets\vendor\bootstrap\css\bootstrap.rtl.css.map" />
+    <None Include="wwwroot\BosphorusElite\assets\vendor\bootstrap\css\bootstrap.rtl.min.css" />
+    <None Include="wwwroot\BosphorusElite\assets\vendor\bootstrap\css\bootstrap.rtl.min.css.map" />
+    <None Include="wwwroot\BosphorusElite\assets\vendor\bootstrap\js\bootstrap.bundle.js" />
+    <None Include="wwwroot\BosphorusElite\assets\vendor\bootstrap\js\bootstrap.bundle.js.map" />
+    <None Include="wwwroot\BosphorusElite\assets\vendor\bootstrap\js\bootstrap.bundle.min.js" />
+    <None Include="wwwroot\BosphorusElite\assets\vendor\bootstrap\js\bootstrap.bundle.min.js.map" />
+    <None Include="wwwroot\BosphorusElite\assets\vendor\bootstrap\js\bootstrap.esm.js" />
+    <None Include="wwwroot\BosphorusElite\assets\vendor\bootstrap\js\bootstrap.esm.js.map" />
+    <None Include="wwwroot\BosphorusElite\assets\vendor\bootstrap\js\bootstrap.esm.min.js" />
+    <None Include="wwwroot\BosphorusElite\assets\vendor\bootstrap\js\bootstrap.esm.min.js.map" />
+    <None Include="wwwroot\BosphorusElite\assets\vendor\bootstrap\js\bootstrap.js" />
+    <None Include="wwwroot\BosphorusElite\assets\vendor\bootstrap\js\bootstrap.js.map" />
+    <None Include="wwwroot\BosphorusElite\assets\vendor\bootstrap\js\bootstrap.min.js" />
+    <None Include="wwwroot\BosphorusElite\assets\vendor\bootstrap\js\bootstrap.min.js.map" />
+    <None Include="wwwroot\BosphorusElite\assets\vendor\glightbox\css\glightbox.css" />
+    <None Include="wwwroot\BosphorusElite\assets\vendor\glightbox\css\glightbox.min.css" />
+    <None Include="wwwroot\BosphorusElite\assets\vendor\glightbox\js\glightbox.js" />
+    <None Include="wwwroot\BosphorusElite\assets\vendor\glightbox\js\glightbox.min.js" />
+    <None Include="wwwroot\BosphorusElite\assets\vendor\swiper\swiper-bundle.min.css" />
+    <None Include="wwwroot\BosphorusElite\assets\vendor\swiper\swiper-bundle.min.js" />
+    <None Include="wwwroot\BosphorusElite\index.html" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.Cookies" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="5.0.12" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="5.0.12" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.14" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.14">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.12" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.12">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="5.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\BosphorusElite\.git\objects\info\" />
+    <Folder Include="wwwroot\BosphorusElite\.git\objects\pack\" />
+    <Folder Include="wwwroot\BosphorusElite\.git\refs\tags\" />
+  </ItemGroup>
+
+</Project>

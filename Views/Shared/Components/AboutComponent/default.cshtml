@@ -1,0 +1,28 @@
+﻿@model List<About>
+<section id="about" class="about">
+    <div class="section-title">
+        <p>ABOUT US</p>
+    </div>
+    <div class="container" data-aos="fade-up">
+        @foreach (var x in Model)
+        {
+            <div class="about-content">
+                <div class="content" data-aos="fade-right" data-aos-delay="200">
+                    <img src="@x.AboutImg" class="img-fluid" alt="">
+                </div>
+                <div class="content" data-aos="fade-left" data-aos-delay="400">
+                    <h3>Bosphorus <span>Elite</span> </h3>
+
+                    <p>
+                        @x.AboutTitle
+                    </p>
+                    <p>
+                        @x.AboutDesc
+                    </p>
+                    
+
+                </div>
+            </div>
+        }
+        </div>
+</section><!-- End About Section -->
