@@ -9,7 +9,7 @@ namespace Bosphorus.ViewComponents
 {
     public class ServiceComponent : ViewComponent
     {
-        IServiceRepository _serviceRepository;
+        private readonly IServiceRepository _serviceRepository;
 
         public ServiceComponent(IServiceRepository serviceRepository)
         {
