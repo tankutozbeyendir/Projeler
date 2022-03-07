@@ -17,5 +17,6 @@ namespace Bosphorus.Entity
         public string TeamPassword { get; set; }
 
         public string TeamImage { get; set; }
+        public virtual News news { get; set; }
     }
 }
